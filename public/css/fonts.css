@@ -1,0 +1,148 @@
+/* ===================================================================
+   SELF-HOSTED LOCAL TYPOGRAPHY SYSTEM (Future Agri Infra)
+   Guarantees offline & CDN-independent rendering of Cormorant Garamond & Manrope
+   =================================================================== */
+
+/* Cormorant Garamond - Primary Heading & Display Serif */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Cormorant Garamond Regular'), local('Cormorant Garamond'),
+       url('../fonts/cormorant-garamond-400.woff2') format('woff2'),
+       url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Cormorant Garamond Medium'),
+       url('../fonts/cormorant-garamond-500.woff2') format('woff2'),
+       url('../fonts/CormorantGaramond-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Cormorant Garamond SemiBold'),
+       url('../fonts/cormorant-garamond-600.woff2') format('woff2'),
+       url('../fonts/CormorantGaramond-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Cormorant Garamond Bold'),
+       url('../fonts/cormorant-garamond-700.woff2') format('woff2'),
+       url('../fonts/CormorantGaramond-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Cormorant Garamond Italic'),
+       url('../fonts/cormorant-garamond-italic.woff2') format('woff2'),
+       url('../fonts/CormorantGaramond-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Cormorant Garamond SemiBold Italic'),
+       url('../fonts/cormorant-garamond-italic.woff2') format('woff2'),
+       url('../fonts/CormorantGaramond-Italic.ttf') format('truetype');
+}
+
+/* Manrope - Primary Body & UI Sans-Serif */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Manrope Regular'), local('Manrope'),
+       url('../fonts/manrope-variable.woff2') format('woff2'),
+       url('../fonts/Manrope-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Manrope Medium'),
+       url('../fonts/manrope-variable.woff2') format('woff2'),
+       url('../fonts/Manrope-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Manrope SemiBold'),
+       url('../fonts/manrope-variable.woff2') format('woff2'),
+       url('../fonts/Manrope-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Manrope Bold'),
+       url('../fonts/manrope-variable.woff2') format('woff2'),
+       url('../fonts/Manrope-Bold.ttf') format('truetype');
+}
+
+/* DM Serif Display - Fallback Serif */
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Serif Display'),
+       url('../fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Serif Display Italic'),
+       url('../fonts/DMSerifDisplay-Italic.ttf') format('truetype');
+}
+
+/* Centralized Heading Typography Override */
+:root {
+  --afm-font-heading: 'Cormorant Garamond', Georgia, serif;
+  --fm-font-serif: 'Cormorant Garamond', Georgia, serif;
+  --afm-hero-font-family: 'Cormorant Garamond', Georgia, serif;
+  --sfs-font-heading: 'Cormorant Garamond', Georgia, serif;
+}
+
+.fm-heading,
+.afm-hero__heading,
+.afm-wwa__heading,
+.sfs-h2,
+.sfs-h3,
+.fmpf__title,
+.fmdm__title,
+.fmpf-card__title,
+.fmpj-card__title,
+.fmab__title,
+.fmos__title,
+.fmex__title {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+}

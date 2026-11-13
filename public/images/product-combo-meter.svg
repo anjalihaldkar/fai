@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none">
+  <defs>
+    <linearGradient id="case" x1="83" y1="19" x2="157" y2="151" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDFEFC"/>
+      <stop offset="1" stop-color="#D9E3E3"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="99" y1="43" x2="145" y2="79" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#123750"/>
+      <stop offset="1" stop-color="#285B70"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="120" cy="161" rx="49" ry="7" fill="#163B35" opacity=".12"/>
+  <path d="M91 28a14 14 0 0 1 14-14h30a14 14 0 0 1 14 14v108a14 14 0 0 1-14 14h-30a14 14 0 0 1-14-14V28Z" fill="url(#case)" stroke="#AEBFC3" stroke-width="3"/>
+  <path d="M97 30a8 8 0 0 1 8-8h30a8 8 0 0 1 8 8v7H97v-7Z" fill="#0C66B4"/>
+  <rect x="101" y="48" width="38" height="39" rx="5" fill="url(#screen)" stroke="#9BB6BC" stroke-width="2"/>
+  <text x="120" y="68" fill="#E5F4E9" font-family="Arial,sans-serif" font-size="12" text-anchor="middle">5.8</text>
+  <text x="120" y="80" fill="#9DE1C1" font-family="Arial,sans-serif" font-size="7" text-anchor="middle">pH  EC  °C</text>
+  <circle cx="108" cy="101" r="5" fill="#0D6BB6"/>
+  <circle cx="120" cy="101" r="5" fill="#0D6BB6"/>
+  <circle cx="132" cy="101" r="5" fill="#0D6BB6"/>
+  <circle cx="108" cy="118" r="5" fill="#EAF1EE" stroke="#A6B7B8" stroke-width="2"/>
+  <circle cx="120" cy="118" r="5" fill="#EAF1EE" stroke="#A6B7B8" stroke-width="2"/>
+  <circle cx="132" cy="118" r="5" fill="#EAF1EE" stroke="#A6B7B8" stroke-width="2"/>
+  <path d="M102 143h36" stroke="#0C66B4" stroke-width="3" stroke-linecap="round"/>
+</svg>

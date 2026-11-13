@@ -1,0 +1,194 @@
+@media (max-width: 1240px) {
+  /* Fan & Pad Key Components: prevent mobile browsers scrolling to hidden radios. */
+  .protected-page.fanpad-page #fertigation-system .fmfs__radio {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Fan & Pad Climate & Site Fit: replace the tall card stack with a swipe slider. */
+  .protected-page.fanpad-page #climate-site-fit.has-climate-slider .fmcf-col {
+    display: none;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    gap: 12px;
+    min-width: 0;
+    margin: 0;
+    padding: 12px 2px 5px;
+    list-style: none;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider > .fmcf-card {
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider-controls {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider-button {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    min-height: 42px;
+    padding: 0;
+    border: 1px solid var(--fmcf-card-line);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--fmcf-green);
+    cursor: pointer;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider-button--next {
+    border-color: var(--fmcf-green);
+    background: var(--fmcf-green);
+    color: var(--fmcf-on-green);
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider-button svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider-button:focus-visible {
+    outline: 2px solid var(--fmcf-green);
+    outline-offset: 2px;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider-button:disabled {
+    cursor: default;
+    opacity: .5;
+  }
+
+  .protected-page.fanpad-page #climate-site-fit .fmcf__slider-status {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Fan & Pad Compare Alternatives: show one active comparison card at a time. */
+  .protected-page.fanpad-page #compare-alternatives.has-compare-slider .fmco-cards {
+    grid-template-columns: none;
+    grid-template-rows: auto;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    gap: 12px;
+    padding: 28px 2px 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives.has-compare-slider .fmco-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives.has-compare-slider .fmco-card {
+    grid-row: auto;
+    grid-template-rows: none;
+    grid-auto-rows: auto;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives.has-compare-slider .fmco-card--rec:not(.is-active) {
+    --k-bg: var(--fmco-card-bg);
+    --k-border: var(--fmco-card-line);
+    --k-title: var(--fmco-navy);
+    --k-text: var(--fm-color-text);
+    --k-row: var(--fmco-row-line);
+    --k-icon-bg: var(--fmco-icon-bg);
+    --k-icon: var(--fmco-green);
+    --k-shadow: none;
+    background-color: var(--fmco-card-bg);
+    transform: none;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives.has-compare-slider .fmco-card.is-active {
+    --k-bg: var(--fmco-green);
+    --k-border: var(--fmco-green);
+    --k-title: var(--fmco-on-green);
+    --k-text: color-mix(in srgb, var(--fmco-on-green) 88%, transparent);
+    --k-row: color-mix(in srgb, var(--fmco-on-green) 18%, transparent);
+    --k-icon-bg: color-mix(in srgb, var(--fmco-on-green) 14%, transparent);
+    --k-icon: var(--fmco-on-green);
+    --k-shadow: 0 26px 44px -24px var(--fmco-shadow);
+    background-color: var(--fmco-green);
+    transform: translateY(-4px);
+  }
+
+  .protected-page.fanpad-page #compare-alternatives .fmco__slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives .fmco__slider-button {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    min-height: 42px;
+    padding: 0;
+    border: 1px solid var(--fmco-card-line);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--fmco-green);
+    cursor: pointer;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives .fmco__slider-button--next {
+    border-color: var(--fmco-green);
+    background: var(--fmco-green);
+    color: var(--fmco-on-green);
+  }
+
+  .protected-page.fanpad-page #compare-alternatives .fmco__slider-button svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives .fmco__slider-button:focus-visible {
+    outline: 2px solid var(--fmco-green);
+    outline-offset: 2px;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives .fmco__slider-button:disabled {
+    cursor: default;
+    opacity: .5;
+  }
+
+  .protected-page.fanpad-page #compare-alternatives .fmco__slider-status {
+    flex: 1;
+    text-align: center;
+  }
+}

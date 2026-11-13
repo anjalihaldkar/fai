@@ -1,0 +1,1962 @@
+@extends('layouts.app')
+
+@section('title', 'Home page')
+@section('body_class', 'protected-page')
+
+@section('content')
+<section class="afm-hero">
+      <div class="afm-hero__slides" id="heroSlides">
+        <div class="afm-hero__slide active" style="background-image: url('images/banner2.jpeg');"></div>
+        <div class="afm-hero__slide" style="background-image: url('images/banner3.jpeg');"></div>
+        <div class="afm-hero__slide" style="background-image: url('images/far3.jpeg');"></div>
+      </div>
+      <div class="afm-hero__dots" id="heroDots">
+        <button class="afm-hero__dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="afm-hero__dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="afm-hero__dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="afm-hero__container">
+        <div class="afm-hero__content">
+          <h1 class="afm-hero__heading fm-heading fm-heading--white">Build farms<br>that <span>perform.</span></h1>
+          <p class="afm-hero__desc fm-text fm-text--white">Turnkey hydroponics and protected farming solutions from
+            viability and design to
+            execution and operational success.</p>
+          <div class="afm-hero__actions">
+            <a href="#" class="afm-hero__cta-primary fm-cta-btn">
+              Explore Our Solutions
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#" class="afm-hero__cta-ghost">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              Watch Our Story
+            </a>
+          </div>
+        </div>
+
+        <div class="afm-hero__weather-cards-wrapper"
+          style="position: relative; width: 100%; max-width: 440px; display: flex; justify-content: flex-end;">
+          <div class="afm-hero__weather-card nwc-card" id="weatherCardNew">
+            <div class="nwc-header">
+              <div class="nwc-live"><span class="nwc-dot"></span> LIVE DATA</div>
+              <div class="nwc-updated">Last updated 10:15 AM <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-9.21l5.25 5.25" />
+                </svg></div>
+            </div>
+
+            <div class="nwc-title-area">
+              <h3 class="nwc-location">Ahmedabad, Gujarat</h3>
+              <div class="nwc-weather-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="5" />
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <span>Clear Sky</span>
+              </div>
+            </div>
+
+            <div class="nwc-subtitle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg> Site 01 &middot; Greenhouse Zone
+            </div>
+
+            <div class="nwc-metrics">
+              <div class="nwc-metric nwc-metric--yellow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="5" />
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <div class="nwc-val">5.8<span>kWh/m²</span></div>
+                <div class="nwc-lbl">Solar / Day</div>
+              </div>
+              <div class="nwc-metric nwc-metric--red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+                </svg>
+                <div class="nwc-val">42<span>°C</span></div>
+                <div class="nwc-lbl">Summer Peak</div>
+              </div>
+              <div class="nwc-metric nwc-metric--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 22a5 5 0 0 0 5-5c0-2-5-9-5-9s-5 7-5 9a5 5 0 0 0 5 5z"></path>
+                </svg>
+                <div class="nwc-val">34<span>%</span></div>
+                <div class="nwc-lbl">Mean RH</div>
+              </div>
+              <div class="nwc-metric nwc-metric--blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2">
+                  </path>
+                </svg>
+                <div class="nwc-val">12 <span>km/h</span></div>
+                <div class="nwc-lbl">Wind Speed</div>
+              </div>
+            </div>
+
+            <div class="nwc-chart-header">
+              <div class="nwc-chart-title">Temperature Trend</div>
+              <div class="nwc-dropdown">Monthly (Jan - Dec) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg></div>
+            </div>
+
+            <div class="nwc-chart">
+              <div class="nwc-grid">
+                <div class="nwc-grid-line"></div>
+                <div class="nwc-grid-line"></div>
+                <div class="nwc-grid-line"></div>
+              </div>
+              <div class="nwc-bars">
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 25%"></div><span>Jan</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 45%"></div><span>Feb</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 60%"></div><span>Mar</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 75%"></div><span>Apr</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 90%"></div><span>May</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 100%"></div><span>Jun</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 85%"></div><span>Jul</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 70%"></div><span>Aug</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 55%"></div><span>Sep</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 45%"></div><span>Oct</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 50%"></div><span>Nov</span>
+                </div>
+                <div class="nwc-bar-col">
+                  <div class="nwc-bar" style="height: 60%"></div><span>Dec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="nwc-footer">
+              <div class="nwc-ft-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2">
+                  </path>
+                </svg>
+                <div><strong>12 km/h</strong><span>Wind Speed</span></div>
+              </div>
+              <div class="nwc-ft-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 1 8.3C19.2 15.6 15.5 20 11 20z">
+                  </path>
+                </svg>
+                <div><strong>420 ppm</strong><span>CO₂ Level</span></div>
+              </div>
+              <div class="nwc-ft-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="16" y1="13" x2="16" y2="21"></line>
+                  <line x1="8" y1="13" x2="8" y2="21"></line>
+                  <line x1="12" y1="15" x2="12" y2="23"></line>
+                  <path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path>
+                </svg>
+                <div><strong>0 mm</strong><span>Rainfall</span></div>
+              </div>
+              <div class="nwc-ft-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <div><strong>Good</strong><span>Air Quality</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="afm-wwa">
+      <div class="afm-wwa__container">
+        <div class="afm-wwa__content">
+          <div class="afm-wwa__eyebrow">Who We Are</div>
+          <h2 class="afm-wwa__heading fm-heading">We build the farm,<br>then we make it <span>produce.</span></h2>
+          <p class="afm-wwa__text fm-text">
+            Future Agri Infra develops turnkey polyhouse, nethouse and hydroponic farms across India — design, BOQ,
+            subsidy filing, civil work, structure, fertigation and commissioning under one contract.
+          </p>
+          <p class="afm-wwa__text fm-text">
+            Where most contractors stop at handover, we stay: <strong>agronomy support</strong> through the
+            <strong>first crop</strong> cycles, and so the produce sells at the price the model assumed.
+          </p>
+          <a href="#" class="afm-wwa__cta fm-cta-btn">
+            Our Story
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        <div class="afm-wwa__visual">
+          <img src="images/width_779.png" alt="Collage of greenhouse and fresh produce" class="afm-wwa__image">
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Services Tabs Section -->
+    <section class="sfs-section" data-autoplay="false">
+      <div class="sfs-bg-overlay"></div>
+      <div class="sfs-container">
+
+        <div class="sfs-header">
+          <div class="sfs-eyebrow">
+            <span class="sfs-line"></span>
+            <span class="sfs-eyebrow-text">OUR SERVICES</span>
+            <span class="sfs-line"></span>
+          </div>
+          <h2 class="sfs-h2 fm-heading fm-heading--white">Complete Support for <span class="sfs-accent-text">Smarter
+              Farms</span></h2>
+          <p class="sfs-subtitle fm-text fm-text--white">From initial consultation to market linkage, we deliver
+            end-to-end protected farming solutions designed for long-term success.</p>
+        </div>
+
+        <div class="sfs-tab-bar-wrap">
+          <div class="sfs-tab-bar" role="tablist" aria-label="Services">
+            <button class="sfs-tab sfs-is-active" role="tab" aria-selected="true" aria-controls="sfs-panel"
+              data-index="0">
+              <span class="sfs-tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5M9 10h6" />
+                </svg>
+              </span>
+              <span class="sfs-tab-content">
+                <span class="sfs-tab-num">01</span>
+                <span class="sfs-tab-label">Protected Structures</span>
+              </span>
+            </button>
+            <span class="sfs-divider"></span>
+            <button class="sfs-tab" role="tab" aria-selected="false" aria-controls="sfs-panel" data-index="1">
+              <span class="sfs-tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 16v-6M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM16 12l-4-2M8 12l4-2" />
+                </svg>
+              </span>
+              <span class="sfs-tab-content">
+                <span class="sfs-tab-num">02</span>
+                <span class="sfs-tab-label">Growing Systems</span>
+              </span>
+            </button>
+            <span class="sfs-divider"></span>
+            <button class="sfs-tab" role="tab" aria-selected="false" aria-controls="sfs-panel" data-index="2">
+              <span class="sfs-tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 21A10 10 0 0 0 22 11V3h-8a10 10 0 0 0-10 10v0c0 4.418 3.582 8 8 8zM12 21v-9" />
+                </svg>
+              </span>
+              <span class="sfs-tab-content">
+                <span class="sfs-tab-num">03</span>
+                <span class="sfs-tab-label">Crop Solutions</span>
+              </span>
+            </button>
+            <span class="sfs-divider"></span>
+            <button class="sfs-tab" role="tab" aria-selected="false" aria-controls="sfs-panel" data-index="3">
+              <span class="sfs-tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+              </span>
+              <span class="sfs-tab-content">
+                <span class="sfs-tab-num">04</span>
+                <span class="sfs-tab-label">Smart Automation</span>
+              </span>
+            </button>
+            <span class="sfs-divider"></span>
+            <button class="sfs-tab" role="tab" aria-selected="false" aria-controls="sfs-panel" data-index="4">
+              <span class="sfs-tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+              </span>
+              <span class="sfs-tab-content">
+                <span class="sfs-tab-num">05</span>
+                <span class="sfs-tab-label">Water & Climate Management</span>
+              </span>
+            </button>
+            <span class="sfs-divider"></span>
+            <button class="sfs-tab" role="tab" aria-selected="false" aria-controls="sfs-panel" data-index="5">
+              <span class="sfs-tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M18 20V10M12 20V4M6 20v-6" />
+                </svg>
+              </span>
+              <span class="sfs-tab-content">
+                <span class="sfs-tab-num">06</span>
+                <span class="sfs-tab-label">Market Linkage</span>
+              </span>
+            </button>
+          </div>
+          <div class="sfs-nav" aria-hidden="true">
+            <button type="button" class="fmpj-nav__btn fmpj-nav__btn--prev" id="sfs-nav-prev"
+              aria-label="Previous tabs">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="fmpj-nav__btn fmpj-nav__btn--next" id="sfs-nav-next" aria-label="Next tabs">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="sfs-panel" id="sfs-panel" role="tabpanel" aria-labelledby="sfs-tab-0">
+          <div class="sfs-panel-left">
+            <div class="sfs-panel-left-content">
+              <div class="sfs-panel-header">
+                <span class="sfs-panel-num" id="sfs-content-num">01</span>
+                <span class="sfs-panel-label" id="sfs-content-label">PROTECTED STRUCTURES</span>
+              </div>
+              <h3 class="afm-wwa__heading fm-heading" id="sfs-content-title">Engineered Structures for Every <span
+                  class="fmdm__accent">Climate.</span>
+              </h3>
+              <p class="sfs-panel-desc fm-text" id="sfs-content-desc">We design and deliver greenhouse, polyhouse and
+                net house
+                structures tailored to your crop, location and production goals.</p>
+
+              <div class="sfs-features" id="sfs-content-features">
+                <div class="sfs-feature">
+                  <span class="sfs-feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </span>
+                  <div class="sfs-feature-text">
+                    <h4 class="sfs-feature-title">Site-Specific Design</h4>
+                    <p class="sfs-feature-desc">Customized structures for your land and climate.</p>
+                  </div>
+                </div>
+                <div class="sfs-feature">
+                  <span class="sfs-feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M6 3h12l4 6-10 12L2 9z" />
+                    </svg>
+                  </span>
+                  <div class="sfs-feature-text">
+                    <h4 class="sfs-feature-title">Durable & High-Quality</h4>
+                    <p class="sfs-feature-desc">Long-lasting materials and precision engineering.</p>
+                  </div>
+                </div>
+                <div class="sfs-feature">
+                  <span class="sfs-feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                      <line x1="12" y1="22.08" x2="12" y2="12" />
+                    </svg>
+                  </span>
+                  <div class="sfs-feature-text">
+                    <h4 class="sfs-feature-title">Scalable Solutions</h4>
+                    <p class="sfs-feature-desc">From small units to large commercial farms.</p>
+                  </div>
+                </div>
+                <div class="sfs-feature">
+                  <span class="sfs-feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                  </span>
+                  <div class="sfs-feature-text">
+                    <h4 class="sfs-feature-title">Optimized for Crops</h4>
+                    <p class="sfs-feature-desc">Designed to maximize yield and efficiency.</p>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#" class="sfs-cta fm-cta-btn">
+                Explore This Service
+                <svg class="sfs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="sfs-panel-right">
+            <!-- <div class="sfs-image-gradient"></div> -->
+            <img src="images/farm1.jpeg" alt="Protected Structures" class="sfs-image" id="sfs-content-image">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- <section class="fmpf" id="plan-your-farm">
+        <div class="fmpf__overlay"></div>
+
+        <div class="fmpf__header">
+          <span class="fmpf-eyebrow">
+            SMART FARMS. SUSTAINABLE FUTURES.
+            <i class="fmpf-eyebrow__line"></i>
+          </span>
+          <h2 class="fm-heading fmpf__title">
+            Turn your opportunity<br>
+            into a clear farm plan.
+          </h2>
+          <p class="new-ss">
+            From land to harvest, we help you plan, build and grow<br>
+            with confidence — every step of the way.
+          </p>
+        </div>
+
+        <div class="fmpf__container">
+
+          <div class="fmpf-left">
+            <div class="fmpf-feature">
+              <div class="fmpf-feature__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+              </div>
+              <div class="fmpf-feature__content">
+                <h3 class="fmpf-feature__title">Plan with Experts</h3>
+                <p class="fmpf-feature__desc">Site analysis, crop planning, and farm design.</p>
+              </div>
+            </div>
+
+            <div class="fmpf-feature">
+              <div class="fmpf-feature__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+              </div>
+              <div class="fmpf-feature__content">
+                <h3 class="fmpf-feature__title">Build with Confidence</h3>
+                <p class="fmpf-feature__desc">Quality infrastructure, smart technology, scalable solutions.</p>
+              </div>
+            </div>
+
+            <div class="fmpf-feature">
+              <div class="fmpf-feature__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                  <polyline points="16 7 22 7 22 13" />
+                </svg>
+              </div>
+              <div class="fmpf-feature__content">
+                <h3 class="fmpf-feature__title">Grow for the Future</h3>
+                <p class="fmpf-feature__desc">Higher yields, better market access, long-term profitability.</p>
+              </div>
+            </div>
+
+            <div class="fmpf-cta">
+              <a href="#" class="fm-cta-btn">Plan Your Farm <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg></a>
+            </div>
+          </div>
+
+          <div class="fmpf-right">
+            <div class="fmpf-card">
+              <div class="fmpf-card__header">
+                <h2 class="fmpf-card__title">Your Farm Plan Includes <span class="fmpf-card__line"></span></h2>
+                <div class="fmpf-card__badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  </svg>
+                  Customized for your land & goals
+                </div>
+              </div>
+
+              <div class="fmpf-card__grid">
+              
+                <div class="fmpf-item">
+                  <div class="fmpf-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg></div>
+                  <div class="fmpf-item__content">
+                    <h4 class="fmpf-item__title">Site Assessment & Feasibility</h4>
+                    <p class="fmpf-item__desc">Evaluate land, climate & resources</p>
+                  </div>
+                </div>
+                <div class="fmpf-item">
+                  <div class="fmpf-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M2 12l5-5 5 5 M2 12l10 10 M12 2l10 10-5 5" />
+                    </svg></div>
+                  <div class="fmpf-item__content">
+                    <h4 class="fmpf-item__title">Subsidy Linksoning</h4>
+                    <p class="fmpf-item__desc">Navigate support & documentation</p>
+                  </div>
+                </div>
+                <div class="fmpf-item">
+                  <div class="fmpf-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                      <path d="M9 22v-4h6v4 M12 6v.01 M12 10v.01 M12 14v.01" />
+                    </svg></div>
+                  <div class="fmpf-item__content">
+                    <h4 class="fmpf-item__title">Infrastructure Development</h4>
+                    <p class="fmpf-item__desc">Greenhouses, irrigation & utilities</p>
+                  </div>
+                </div>
+                <div class="fmpf-item">
+                  <div class="fmpf-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M12 2v20 M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg></div>
+                  <div class="fmpf-item__content">
+                    <h4 class="fmpf-item__title">Technology Integration</h4>
+                    <p class="fmpf-item__desc">Automation & smart farming</p>
+                  </div>
+                </div>
+                <div class="fmpf-item">
+                  <div class="fmpf-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                    </svg></div>
+                  <div class="fmpf-item__content">
+                    <h4 class="fmpf-item__title">Agriculture Support</h4>
+                    <p class="fmpf-item__desc">Crop planning & expert guidance</p>
+                  </div>
+                </div>
+                <div class="fmpf-item">
+                  <div class="fmpf-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg></div>
+                  <div class="fmpf-item__content">
+                    <h4 class="fmpf-item__title">Consultation & Advisory</h4>
+                    <p class="fmpf-item__desc">Ongoing expert support</p>
+                  </div>
+                </div>
+                <div class="fmpf-item">
+                  <div class="fmpf-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <line x1="18" y1="20" x2="18" y2="10" />
+                      <line x1="12" y1="20" x2="12" y2="4" />
+                      <line x1="6" y1="20" x2="6" y2="14" />
+                    </svg></div>
+                  <div class="fmpf-item__content">
+                    <h4 class="fmpf-item__title">Market Linkage</h4>
+                    <p class="fmpf-item__desc">Better access, higher returns</p>
+                  </div>
+                </div>
+                <div class="fmpf-item">
+                  <div class="fmpf-item__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <polyline points="9 12 11 14 15 10" />
+                    </svg></div>
+                  <div class="fmpf-item__content">
+                    <h4 class="fmpf-item__title">Turnkey Project Delivery</h4>
+                    <p class="fmpf-item__desc">From design to commissioning</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fmpf-card__banner">
+                <div class="fmpf-banner__icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  </svg>
+                </div>
+                <div class="fmpf-banner__text">
+                  <h4>Let’s build a farm that performs.</h4>
+                  <p>Your vision. Our expertise. A stronger tomorrow.</p>
+                </div>
+                <div class="fmpf-banner__arrow">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+  
+
+    <section class="fmdm" id="farming-models">
+      <header class="fmdm__head">
+        <span class="fmdm-eyebrow">Our Models<i class="fmdm-eyebrow__line"></i></span>
+        <h2 class="fm-heading fmdm__title">Different models.<br>A better fit for <span class="fmdm__accent"> your
+            goals.</span></h2>
+        <p class="fm-text fmdm__text">Explore a range of greenhouse and farming models designed for your land,
+          climate,
+          budget and business vision.</p>
+      </header>
+
+      <div class="fmdm__stage">
+
+        <svg class="fmdm__band" viewBox="0 0 1466 200" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 0 C 450 160, 950 180, 1466 50 L1466 202 L0 202 Z" fill="#02263E"></path>
+        </svg>
+
+
+        <div class="fmdm__viewport">
+          <div class="fmdm__track" id="fmdmTrack">
+            <!-- Card 1 -->
+            <article class="fmdm-card" tabindex="0" aria-expanded="false" data-default="true">
+              <img class="fmdm-card__img" src="images/farm1.jpeg" alt="Conventional Greenhouse" loading="lazy">
+              <div class="fmdm-card__compact">
+                <span class="fmdm-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.7">
+                    <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5M9 10h6" />
+                  </svg></span>
+                <div class="fmdm-card__row">
+                  <div>
+                    <h3 class="fmdm-card__name">Conventional Greenhouse</h3>
+                    <p class="fmdm-card__desc">Controlled and enhanced for higher yields.</p>
+                  </div>
+                  <a href="#" class="fmdm-card__go" aria-label="View Conventional Greenhouse">→</a>
+                </div>
+              </div>
+              <div class="fmdm-card__full">
+                <div class="fmdm-card__head">
+                  <span class="fmdm-card__badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.7">
+                      <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5M9 10h6" />
+                    </svg></span>
+                  <div>
+                    <h3 class="fmdm-card__title">Conventional Greenhouse</h3>
+                    <p class="fmdm-card__sub">Controlled and enhanced</p>
+                  </div>
+                </div>
+                <div class="fmdm-card__stats">
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 20V10M18 20V4M6 20v-4" />
+                      </svg></span>
+                    <div><strong>20–30%</strong><span>Higher Yield</span></div>
+                  </div>
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 22a5 5 0 0 0 5-5c0-2-5-9-5-9s-5 7-5 9a5 5 0 0 0 5 5z" />
+                      </svg></span>
+                    <div><strong>20–40%</strong><span>Water Saving</span></div>
+                  </div>
+                </div>
+                <a href="#" class="fm-cta-btn fmdm-card__cta">Explore This Model <svg width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg></a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="fmdm-card" tabindex="0" aria-expanded="false">
+              <img class="fmdm-card__img" src="images/farm4.jpeg" alt="NFT Hydroponics" loading="lazy">
+              <div class="fmdm-card__compact">
+                <span class="fmdm-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.7">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg></span>
+                <div class="fmdm-card__row">
+                  <div>
+                    <h3 class="fmdm-card__name">NFT Hydroponics</h3>
+                    <p class="fmdm-card__desc">Efficient, clean and scalable.</p>
+                  </div>
+                  <a href="#" class="fmdm-card__go" aria-label="View NFT Hydroponics">→</a>
+                </div>
+              </div>
+              <div class="fmdm-card__full">
+                <div class="fmdm-card__head">
+                  <span class="fmdm-card__badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.7">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg></span>
+                  <div>
+                    <h3 class="fmdm-card__title">NFT Hydroponics</h3>
+                    <p class="fmdm-card__sub">Clean and scalable</p>
+                  </div>
+                </div>
+                <div class="fmdm-card__stats">
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 20V10M18 20V4M6 20v-4" />
+                      </svg></span>
+                    <div><strong>40–60%</strong><span>Higher Yield</span></div>
+                  </div>
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 22a5 5 0 0 0 5-5c0-2-5-9-5-9s-5 7-5 9a5 5 0 0 0 5 5z" />
+                      </svg></span>
+                    <div><strong>80–90%</strong><span>Water Saving</span></div>
+                  </div>
+                </div>
+                <a href="#" class="fm-cta-btn fmdm-card__cta">Explore This Model <svg width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg></a>
+              </div>
+            </article>
+
+            <!-- Card 3 NVPH -->
+            <article class="fmdm-card" tabindex="0" aria-expanded="false">
+              <img class="fmdm-card__img" src="images/banner2.jpeg" alt="NVPH" loading="eager">
+              <div class="fmdm-card__compact">
+                <span class="fmdm-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.7">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg></span>
+                <div class="fmdm-card__row">
+                  <div>
+                    <h3 class="fmdm-card__name">NVPH</h3>
+                    <p class="fmdm-card__desc">Climate-Controlled</p>
+                  </div>
+                  <a href="#" class="fmdm-card__go" aria-label="View NVPH">→</a>
+                </div>
+              </div>
+              <div class="fmdm-card__full">
+                <div class="fmdm-card__head">
+                  <span class="fmdm-card__badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.7">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg></span>
+                  <div>
+                    <h3 class="fmdm-card__title">NVPH</h3>
+                    <p class="fmdm-card__sub">Climate-Controlled</p>
+                  </div>
+                </div>
+                <div class="fmdm-card__stats">
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 20V10M18 20V4M6 20v-4" />
+                      </svg></span>
+                    <div><strong>30-50%</strong><span>Higher Yield</span></div>
+                  </div>
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 22a5 5 0 0 0 5-5c0-2-5-9-5-9s-5 7-5 9a5 5 0 0 0 5 5z" />
+                      </svg></span>
+                    <div><strong>40-60%</strong><span>Water Saving</span></div>
+                  </div>
+                </div>
+                <a href="#" class="fm-cta-btn fmdm-card__cta">Explore This Model <svg width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg></a>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="fmdm-card" tabindex="0" aria-expanded="false">
+              <img class="fmdm-card__img" src="images/far3.jpeg" alt="Polyhouse (Open-top)" loading="lazy">
+              <div class="fmdm-card__compact">
+                <span class="fmdm-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.7">
+                    <path d="M6 3h12l4 6-10 12L2 9z" />
+                  </svg></span>
+                <div class="fmdm-card__row">
+                  <div>
+                    <h3 class="fmdm-card__name">Polyhouse (Open-top)</h3>
+                    <p class="fmdm-card__desc">Cost-effective and versatile.</p>
+                  </div>
+                  <a href="#" class="fmdm-card__go" aria-label="View Polyhouse (Open-top)">→</a>
+                </div>
+              </div>
+              <div class="fmdm-card__full">
+                <div class="fmdm-card__head">
+                  <span class="fmdm-card__badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.7">
+                      <path d="M6 3h12l4 6-10 12L2 9z" />
+                    </svg></span>
+                  <div>
+                    <h3 class="fmdm-card__title">Polyhouse (Open-top)</h3>
+                    <p class="fmdm-card__sub">Cost-effective and versatile</p>
+                  </div>
+                </div>
+                <div class="fmdm-card__stats">
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 20V10M18 20V4M6 20v-4" />
+                      </svg></span>
+                    <div><strong>15–25%</strong><span>Higher Yield</span></div>
+                  </div>
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 22a5 5 0 0 0 5-5c0-2-5-9-5-9s-5 7-5 9a5 5 0 0 0 5 5z" />
+                      </svg></span>
+                    <div><strong>20–30%</strong><span>Water Saving</span></div>
+                  </div>
+                </div>
+                <a href="#" class="fm-cta-btn fmdm-card__cta">Explore This Model <svg width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg></a>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="fmdm-card" tabindex="0" aria-expanded="false">
+              <img class="fmdm-card__img" src="images/farm5.jpeg" alt="Net House" loading="lazy">
+              <div class="fmdm-card__compact">
+                <span class="fmdm-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.7">
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                  </svg></span>
+                <div class="fmdm-card__row">
+                  <div>
+                    <h3 class="fmdm-card__name">Net House</h3>
+                    <p class="fmdm-card__desc">Protected cultivation for better quality.</p>
+                  </div>
+                  <a href="#" class="fmdm-card__go" aria-label="View Net House">→</a>
+                </div>
+              </div>
+              <div class="fmdm-card__full">
+                <div class="fmdm-card__head">
+                  <span class="fmdm-card__badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.7">
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                      <line x1="12" y1="22.08" x2="12" y2="12" />
+                    </svg></span>
+                  <div>
+                    <h3 class="fmdm-card__title">Net House</h3>
+                    <p class="fmdm-card__sub">Protected cultivation</p>
+                  </div>
+                </div>
+                <div class="fmdm-card__stats">
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 20V10M18 20V4M6 20v-4" />
+                      </svg></span>
+                    <div><strong>10–20%</strong><span>Higher Yield</span></div>
+                  </div>
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 22a5 5 0 0 0 5-5c0-2-5-9-5-9s-5 7-5 9a5 5 0 0 0 5 5z" />
+                      </svg></span>
+                    <div><strong>15–25%</strong><span>Water Saving</span></div>
+                  </div>
+                </div>
+                <a href="#" class="fm-cta-btn fmdm-card__cta">Explore This Model <svg width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg></a>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="fmdm-card" tabindex="0" aria-expanded="false">
+              <img class="fmdm-card__img" src="images/farm6.jpeg" alt="Ultra Hydroponics" loading="lazy">
+              <div class="fmdm-card__compact">
+                <span class="fmdm-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.7">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg></span>
+                <div class="fmdm-card__row">
+                  <div>
+                    <h3 class="fmdm-card__name">Ultra Hydroponics</h3>
+                    <p class="fmdm-card__desc">High-density growing system.</p>
+                  </div>
+                  <a href="#" class="fmdm-card__go" aria-label="View Ultra Hydroponics">→</a>
+                </div>
+              </div>
+              <div class="fmdm-card__full">
+                <div class="fmdm-card__head">
+                  <span class="fmdm-card__badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="1.7">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg></span>
+                  <div>
+                    <h3 class="fmdm-card__title">Ultra Hydroponics</h3>
+                    <p class="fmdm-card__sub">High-density system</p>
+                  </div>
+                </div>
+                <div class="fmdm-card__stats">
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 20V10M18 20V4M6 20v-4" />
+                      </svg></span>
+                    <div><strong>50–70%</strong><span>Higher Yield</span></div>
+                  </div>
+                  <div class="fmdm-stat"><span class="fmdm-stat__ico"><svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.7">
+                        <path d="M12 22a5 5 0 0 0 5-5c0-2-5-9-5-9s-5 7-5 9a5 5 0 0 0 5 5z" />
+                      </svg></span>
+                    <div><strong>85–95%</strong><span>Water Saving</span></div>
+                  </div>
+                </div>
+                <a href="#" class="fm-cta-btn fmdm-card__cta">Explore This Model <svg width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="fmdm-foot">
+        <div class="fmdm-foot__help">
+          <span class="fmdm-foot__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg></span>
+          <div class="fmdm-foot__copy">
+            <strong>Not sure which model is right for you?</strong>
+            <span>Our experts will help you choose the best solution for your land and goals.</span>
+          </div>
+        </div>
+        <div class="fmdm-nav">
+          <button class="fmdm-nav__btn" id="fmdmPrev" aria-label="Previous model">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <div class="fmdm-nav__dots" id="fmdmDots" role="tablist"></div>
+          <button class="fmdm-nav__btn" id="fmdmNext" aria-label="Next model">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+        <div class="fmdm-foot__actions">
+          <a href="#contact" class="fm-cta-btn fmdm-foot__cta">Consult Our Experts <svg width="20" height="20"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg></a>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Academy & Training Section -->
+    <section class="fmat-hero" id="academy-training">
+      <div class="fmat-hero__media">
+        <img src="images/2.png" alt="Trainer teaching farmers inside a polyhouse" class="fmat-hero__img"
+          loading="eager">
+      </div>
+
+      <div class="fmat-hero__inner">
+        <div class="fmat-hero__content">
+          <span class="fmat-eyebrow fm-fade-up fm-delay-1"><i class="fmat-eyebrow__line"></i>Academy &amp;
+            Training</span>
+
+          <h1 class="fm-heading fmat-hero__title fm-fade-up fm-delay-2">Real knowledge<br>for
+            <span class="fmdm__accent"> real farms.</span>
+          </h1>
+
+          <p class="fm-text fmat-hero__text fm-fade-up fm-delay-3">Hands-on training. Practical learning. Real-world
+            results. Our programs are
+            designed for farmers, entrepreneurs and professionals who want to build a successful future in
+            agriculture.
+          </p>
+
+
+          <ul class="fmat-stats fm-fade-up fm-delay-5">
+            <li class="fmat-stats__item"><strong>70,000+</strong><span>People trained</span></li>
+            <li class="fmat-stats__item"><strong>12+</strong><span>States</span></li>
+            <li class="fmat-stats__item"><strong>250+</strong><span>Farm visits &amp; live projects</span></li>
+          </ul>
+
+          <a href="#programs" class="fm-cta-btn fmat-hero__btn fm-fade-up fm-delay-4">
+            Explore Training Programs <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+      <button class="fmat-hero__next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="width: 24px; height: 24px;">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+
+      <div class="fmat-path">
+        <div class="fmat-path__inner">
+          <div class="fmat-path__label">Choose your<br>learning path<i class="fmat-path__labelline"></i></div>
+          <ol class="fmat-path__steps">
+            <li class="fmat-step is-active"><span class="fmat-step__dot">01</span><span class="fmat-step__title">Crop
+                Management Training</span></li>
+            <li class="fmat-step"><span class="fmat-step__dot">02</span><span class="fmat-step__title">Protected
+                Farming
+                Fundamentals</span></li>
+            <li class="fmat-step"><span class="fmat-step__dot">03</span><span class="fmat-step__title">Hydroponics
+                &amp;
+                Soilless Cultivation</span></li>
+            <li class="fmat-step"><span class="fmat-step__dot">04</span><span class="fmat-step__title">Farm Business
+                &amp; Market Linkage</span></li>
+            <li class="fmat-step"><span class="fmat-step__dot">05</span><span class="fmat-step__title">Customised
+                On-site Training</span></li>
+            <li class="fmat-step"><span class="fmat-step__dot">06</span><span class="fmat-step__title">Customised
+                On-site Training</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Projects Section -->
+    <section class="fmpj" id="our-projects" data-fmpj>
+      <div class="fmpj__inner">
+
+        <!-- LEFT TEXT -->
+        <div class="fmpj__left">
+          <span class="fmpj-eyebrow"><i class="fmpj-eyebrow__line"></i>Our Projects</span>
+          <h2 class="fm-heading fm-heading ">Real Projects.<br><span class="fmdm__accent">Real Outcomes.</span></h2>
+
+
+          <p class="fm-text fmpj__text">From precision-designed greenhouses to large-scale protected cultivation
+            farms,
+            our projects are helping farmers and agri-businesses achieve higher yields, better quality and long-term
+            profitability.</p>
+
+          <a href="#all-projects" class="fm-cta-btn">
+            View All Projects
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- RIGHT: slider -->
+        <div class="fmpj__right">
+          <div class="fmpj__track" data-fmpj-track tabindex="0" role="region" aria-label="Project case studies">
+
+            <!-- CARD 1 -->
+            <article class="fmpj-card is-active" data-fmpj-card>
+              <div class="fmpj-card__media">
+                <img class="fmpj-card__img" src="images/new3.png" alt="Tomato Protected Cultivation">
+                <span class="fmpj-card__num">01</span>
+                <span class="fmpj-card__tag fmpj-card__tag--greenhouse">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                  </svg>
+                  GREENHOUSE PROJECT
+                </span>
+              </div>
+              <div class="fmpj-card__body">
+                <h3 class="fmpj-card__title">Tomato<br>Protected Cultivation</h3>
+                <div class="fmpj-card__loc">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>Nashik, Maharashtra</span>
+                </div>
+                <div class="fmpj-card__stats">
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                      </svg>
+                      <strong>1.2 Acres</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Area</span>
+                  </div>
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10" />
+                        <line x1="12" y1="20" x2="12" y2="4" />
+                        <line x1="6" y1="20" x2="6" y2="14" />
+                      </svg>
+                      <strong>3.5x</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Yield Increase</span>
+                  </div>
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="6" />
+                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                      </svg>
+                      <strong>Premium</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Quality</span>
+                  </div>
+                </div>
+                <div class="fmpj-card__footer">
+                  <a href="#project-tomato" class="fmpj-card__more">
+                    <span class="fmpj-card__more-txt">View Project &nbsp;&rarr;</span>
+                    <span class="fmpj-card__more-bar"></span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="fmpj-card" data-fmpj-card>
+              <div class="fmpj-card__media">
+                <img class="fmpj-card__img" src="images/trynew.png" alt="Capsicum Cultivation">
+                <span class="fmpj-card__num">02</span>
+                <span class="fmpj-card__tag fmpj-card__tag--polyhouse">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
+                  POLYHOUSE PROJECT
+                </span>
+              </div>
+              <div class="fmpj-card__body">
+                <h3 class="fmpj-card__title">Capsicum<br>Cultivation</h3>
+                <div class="fmpj-card__loc">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>Indore, Madhya Pradesh</span>
+                </div>
+                <div class="fmpj-card__stats">
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                      </svg>
+                      <strong>0.8 Acres</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Area</span>
+                  </div>
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10" />
+                        <line x1="12" y1="20" x2="12" y2="4" />
+                        <line x1="6" y1="20" x2="6" y2="14" />
+                      </svg>
+                      <strong>2.8x</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Yield Increase</span>
+                  </div>
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
+                      <strong>Better</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Disease Control</span>
+                  </div>
+                </div>
+                <div class="fmpj-card__footer">
+                  <a href="#project-capsicum" class="fmpj-card__more">
+                    <span class="fmpj-card__more-txt">View Project &nbsp;&rarr;</span>
+                    <span class="fmpj-card__more-bar"></span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="fmpj-card" data-fmpj-card>
+              <div class="fmpj-card__media">
+                <img class="fmpj-card__img" src="images/gfar.png" alt="Leafy Greens Hydroponics">
+                <span class="fmpj-card__num">03</span>
+                <span class="fmpj-card__tag fmpj-card__tag--hydroponic">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                  </svg>
+                  HYDROPONIC PROJECT
+                </span>
+              </div>
+              <div class="fmpj-card__body">
+                <h3 class="fmpj-card__title">Leafy Greens<br>Hydroponics</h3>
+                <div class="fmpj-card__loc">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>Surat, Gujarat</span>
+                </div>
+                <div class="fmpj-card__stats">
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                      </svg>
+                      <strong>0.5 Acres</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Area</span>
+                  </div>
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10" />
+                        <line x1="12" y1="20" x2="12" y2="4" />
+                        <line x1="6" y1="20" x2="6" y2="14" />
+                      </svg>
+                      <strong>4x</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Yield Increase</span>
+                  </div>
+                  <div class="fmpj-stat">
+                    <div class="fmpj-stat__top">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                      <strong>Year-Round</strong>
+                    </div>
+                    <span class="fmpj-stat__label">Production</span>
+                  </div>
+                </div>
+                <div class="fmpj-card__footer">
+                  <a href="#project-hydroponics" class="fmpj-card__more">
+                    <span class="fmpj-card__more-txt">View Project &nbsp;&rarr;</span>
+                    <span class="fmpj-card__more-bar"></span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Bottom Controls: Dots in center & Prev/Next arrows on right -->
+          <div class="fmpj-bottom">
+            <div class="fmpj-dots" data-fmpj-dots>
+              <button type="button" class="fmpj-dot is-active" data-fmpj-dot="0" aria-label="Go to project 1"></button>
+              <button type="button" class="fmpj-dot" data-fmpj-dot="1" aria-label="Go to project 2"></button>
+              <button type="button" class="fmpj-dot" data-fmpj-dot="2" aria-label="Go to project 3"></button>
+            </div>
+            <div class="fmpj-nav">
+              <button type="button" class="fmpj-nav__btn fmpj-nav__btn--prev" data-fmpj-prev
+                aria-label="Previous project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="fmpj-nav__btn fmpj-nav__btn--next" data-fmpj-next aria-label="Next project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- Plan Your Farm Banner -->
+    <section class="fmpyf" id="plan-your-farm" aria-labelledby="fmpyf-heading">
+      <img class="fmpyf__bg" src="images/plan-farm-bg.jpg" alt="" aria-hidden="true" loading="lazy">
+      <div class="fmpyf__scrim" aria-hidden="true"></div>
+      <div class="fmpyf__inner">
+        <div class="fmpyf__eyebrow">
+          <span class="fmpyf__eyebrow-line" aria-hidden="true"></span>
+          <span class="fmpyf__eyebrow-pill">Future Agri Infra</span>
+          <span class="fmpyf__eyebrow-line" aria-hidden="true"></span>
+        </div>
+        <h2 class="fm-heading fm-heading--white fmpyf__title" id="fmpyf-heading">
+          Turn your opportunity<br>into a <em class="fmpyf__accent">clear farm plan.</em>
+        </h2>
+        <p class="fm-text fm-text--white fmpyf__subtitle">Planning to start a commercial farming business? Let FAI help you evaluate your land, identify suitable crops, select the right farming model and understand the investment and potential returns.</p>
+        <div class="fmpyf__actions">
+          <a href="{{ route('services.plan-farm') }}" class="fm-cta-btn fmpyf__btn">
+            <span>Plan Your Farm</span>
+            <svg class="fmpyf__btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="fmoj" id="our-journey">
+
+
+      <div class="fmoj__inner">
+        <div class="fmoj__content">
+          <span class="fmoj-eyebrow">Our Journey<i class="fmoj-eyebrow__line"></i></span>
+          <h2 class="fm-heading fmoj__title">From Land to Lasting <span class="fmdm__accent"> Success.</span></h2>
+          <p class="fm-text fmoj__text">A complete journey from planning to market, ensuring sustainable growth for
+            every harvest.</p>
+          <a href="#contact" class="fm-cta-btn fmoj__btn">Start Your Journey <span class="fmat-arrow"
+              aria-hidden="true">→</span></a>
+        </div>
+
+        <!-- 4 slanted image panels -->
+        <svg style="width:0;height:0;position:absolute;" aria-hidden="true">
+          <clipPath id="fmojStripClip" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.55 C0.25,0.25 0.5,0.05 1,0.12 L1,1 L0,1 Z"></path>
+          </clipPath>
+        </svg>
+        <div class="fmoj__media" aria-hidden="false">
+          <figure class="fmoj-panel fmoj-panel--1"><img src="images/farm1.jpeg"
+              alt="Engineers inspecting polyhouse structure site" loading="eager"></figure>
+          <figure class="fmoj-panel fmoj-panel--2"><img src="images/farm4.jpeg"
+              alt="Crane erecting steel polyhouse frame" loading="lazy"></figure>
+          <figure class="fmoj-panel fmoj-panel--3"><img src="images/farm5.jpeg"
+              alt="Hydroponic lettuce inside polyhouse" loading="lazy"></figure>
+          <figure class="fmoj-panel fmoj-panel--4"><img src="images/farm6.jpeg"
+              alt="Fresh tomato crates loaded onto truck" loading="lazy"></figure>
+        </div>
+
+        <!-- white wave that covers bottom of images -->
+        <svg class="fmoj__wave" viewBox="0 0 1300 200" preserveAspectRatio="none" aria-hidden="true">
+          <path
+            d="M0 90 C 200 40, 330 40, 520 110 C 700 170, 860 40, 1050 40 C 1150 40, 1230 50, 1300 40 L1300 200 L0 200 Z"
+            fill="var(--fmoj-wave-bg)" />
+        </svg>
+
+        <!-- 6 steps placed along the wave -->
+        <ol class="fmoj-steps">
+          <li class="fmoj-step">
+            <span class="fmoj-step__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M9 11l3 3L22 4"></path>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
+            </span>
+            <span class="fmoj-step__no">01</span>
+            <h3 class="fmoj-step__title">Understand Needs</h3>
+            <p class="fmoj-step__desc">Understand needs & project requirements.</p>
+          </li>
+          <li class="fmoj-step">
+            <span class="fmoj-step__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </span>
+            <span class="fmoj-step__no">02</span>
+            <h3 class="fmoj-step__title">Site Visit</h3>
+            <p class="fmoj-step__desc">Understand your land, resources and goals.</p>
+          </li>
+          <li class="fmoj-step">
+            <span class="fmoj-step__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </span>
+            <span class="fmoj-step__no">03</span>
+            <h3 class="fmoj-step__title">Farm Design</h3>
+            <p class="fmoj-step__desc">Customized, climate-smart designs.</p>
+          </li>
+          <li class="fmoj-step">
+            <span class="fmoj-step__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+              </svg>
+            </span>
+            <span class="fmoj-step__no">04</span>
+            <h3 class="fmoj-step__title">Project Development</h3>
+            <p class="fmoj-step__desc">Quality execution with on-time delivery.</p>
+          </li>
+          <li class="fmoj-step">
+            <span class="fmoj-step__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 1 8.3C19.2 15.6 15.5 20 11 20z">
+                </path>
+                <line x1="11" y1="20" x2="15" y2="10"></line>
+              </svg>
+            </span>
+            <span class="fmoj-step__no">05</span>
+            <h3 class="fmoj-step__title">Agronomy Support</h3>
+            <p class="fmoj-step__desc">Expert guidance for higher yields.</p>
+          </li>
+          <li class="fmoj-step">
+            <span class="fmoj-step__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+                <polyline points="2 16 8 10 12 14 22 4"></polyline>
+              </svg>
+            </span>
+            <span class="fmoj-step__no">06</span>
+            <h3 class="fmoj-step__title">Market Linkage</h3>
+            <p class="fmoj-step__desc">Connect to the right buyers and markets.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+
+
+    <section class="fmis" id="international-services">
+      <div class="fmis__hero">
+        <div class="fmis__hero-top">
+          <div class="fmis__content">
+            <span class="fmis-eyebrow">GLOBAL PRESENCE<i class="fmis-eyebrow__line"></i></span>
+            <h2 class="fm-heading fmis__title">Global expertise. <br>Engineered for <span class="fmdm__accent">local
+                conditions.</span></h2>
+            <p class="fm-text fmis__text">Different geographies. Different challenges. Same commitment — <br>to build
+              high-performing, future-ready farms anywhere in the world.</p>
+          </div>
+          <div class="fmis__globe">
+            <!-- Add your satellite or globe image here -->
+            <img src="images/map.jpeg" alt="Global presence map" loading="lazy">
+          </div>
+        </div>
+        <div class="fmis__panels">
+          <article class="fmis-panel fmis-panel--arid">
+            <img src="images/registan.png" alt="Polyhouses in a hot and arid desert landscape" class="fmis-panel__img"
+              loading="eager">
+            <div class="fmis-panel__info">
+              <h3 class="fmis-panel__title">Hot &amp; Arid</h3>
+              <p class="fmis-panel__text">Extreme temperatures. Efficient cooling.</p>
+            </div>
+          </article>
+          <article class="fmis-panel fmis-panel--tropical">
+            <img src="images/Tropical.png" alt="Polyhouses in a tropical humid region" class="fmis-panel__img"
+              loading="lazy">
+            <div class="fmis-panel__info">
+              <h3 class="fmis-panel__title">Tropical &amp; Humid</h3>
+              <p class="fmis-panel__text">High humidity. Disease management.</p>
+            </div>
+          </article>
+          <article class="fmis-panel fmis-panel--temperate">
+            <img src="images/TEMPRATURE.png" alt="Polyhouses in a temperate region with mountains"
+              class="fmis-panel__img" loading="lazy">
+            <div class="fmis-panel__info">
+              <h3 class="fmis-panel__title">Temperate</h3>
+              <p class="fmis-panel__text">Seasonal planning. Year-round production.</p>
+            </div>
+          </article>
+          <article class="fmis-panel fmis-panel--cold">
+            <img src="images/COLD.png" alt="Greenhouse in a cold snowy highland" class="fmis-panel__img" loading="lazy">
+            <div class="fmis-panel__info">
+              <h3 class="fmis-panel__title">Cold &amp; Highland</h3>
+              <p class="fmis-panel__text">Low temperatures. Controlled environment.</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+      <div class="fmis-bar">
+        <div class="fmis-bar__inner">
+          <div class="fmis-bar__label">Solutions<br>that travel<i class="fmis-bar__labelline"></i></div>
+          <ul class="fmis-bar__list">
+            <li class="fmis-item">
+              <span class="fmis-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 22V10l8-6 8 6v12" />
+                  <path d="M4 14h16" />
+                  <path d="M4 18h16" />
+                </svg></span>
+              <span class="fmis-item__text">Structure<br>Selection</span>
+            </li>
+            <li class="fmis-item">
+              <span class="fmis-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22V12" />
+                  <path d="M12 12c-2.76 0-5-2.24-5-5s2.24-5 5-5c0 3 0 10 0 10z" />
+                  <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5c0 3 0 10 0 10z" />
+                </svg></span>
+              <span class="fmis-item__text">Crop<br>Strategy</span>
+            </li>
+            <li class="fmis-item">
+              <span class="fmis-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg></span>
+              <span class="fmis-item__text">Water &amp;<br>Fertigation</span>
+            </li>
+            <li class="fmis-item">
+              <span class="fmis-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg></span>
+              <span class="fmis-item__text">Automation<br>&amp; Climate Control</span>
+            </li>
+            <li class="fmis-item">
+              <span class="fmis-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <path d="M3 9h18" />
+                  <path d="M9 21V9" />
+                </svg></span>
+              <span class="fmis-item__text">Project<br>Visibility</span>
+            </li>
+            <li class="fmis-item">
+              <span class="fmis-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg></span>
+              <span class="fmis-item__text">Local Support<br>&amp; Training</span>
+            </li>
+          </ul>
+          <p class="fmis-bar__tagline">Different <br>environments. <br>A brighter <br>tomorrow.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <section class="fmts" id="testimonials" data-fmts>
+      <div class="fmts__inner">
+
+        <header class="fmts__head">
+          <div class="fmts__headline">
+            <span class="fmts-eyebrow"><i class="fmts-eyebrow__line"></i>Testimonials</span>
+            <h2 class="fm-heading fm-heading ">What Farmers Say<br> About Working <span class="fmdm__accent"> With
+                Us.</span></h2>
+          </div>
+
+          <div class="fmts__side">
+            <p class="fm-text fmts__text">Real experiences from farmers and partners<br>who have grown with our
+              solutions.</p>
+            <div class="fmts-nav" data-fmts-nav>
+              <button type="button" class="fmts-nav__btn fmts-nav__btn--prev" data-fmts-prev
+                aria-label="Previous testimonials">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="fmts-nav__btn fmts-nav__btn--next" data-fmts-next
+                aria-label="Next testimonials">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div class="fmts__track" data-fmts-track tabindex="0" role="region" aria-label="Farmer testimonials">
+
+          <article class="fmts-card" data-fmts-card>
+            <span class="fmts-card__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="fmts-card__quote">
+              <p>The greenhouse solution helped me achieve better yields and consistent income throughout the year.
+              </p>
+            </blockquote>
+            <i class="fmts-card__rule" aria-hidden="true"></i>
+            
+          </article>
+
+          <article class="fmts-card" data-fmts-card>
+            <span class="fmts-card__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="fmts-card__quote">
+              <p>Their team guided us at every step, from design to implementation. Highly professional and
+                supportive.
+              </p>
+            </blockquote>
+            <i class="fmts-card__rule" aria-hidden="true"></i>
+            <footer class="fmts-card__foot">
+              <img class="fmts-card__avatar" src="images/banner2.jpeg" alt="Suresh Yadav, farmer from Indore"
+                loading="lazy">
+              <div class="fmts-card__who">
+                <strong class="fmts-card__name">Suresh Yadav</strong>
+                <span class="fmts-card__loc">Indore, Madhya Pradesh</span>
+                <span class="fmts-card__role">Farmer</span>
+              </div>
+              <span class="fmts-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+            </footer>
+          </article>
+
+
+          <article class="fmts-card" data-fmts-card>
+            <span class="fmts-card__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="fmts-card__quote">
+              <p>Their team guided us at every step, from design to implementation. Highly professional and
+                supportive.
+              </p>
+            </blockquote>
+            <i class="fmts-card__rule" aria-hidden="true"></i>
+            <footer class="fmts-card__foot">
+              <img class="fmts-card__avatar" src="images/banner2.jpeg" alt="Suresh Yadav, farmer from Indore"
+                loading="lazy">
+              <div class="fmts-card__who">
+                <strong class="fmts-card__name">Suresh Yadav</strong>
+                <span class="fmts-card__loc">Indore, Madhya Pradesh</span>
+                <span class="fmts-card__role">Farmer</span>
+              </div>
+              <span class="fmts-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+            </footer>
+          </article>
+
+          <article class="fmts-card" data-fmts-card>
+            <span class="fmts-card__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="fmts-card__quote">
+              <p>Their team guided us at every step, from design to implementation. Highly professional and
+                supportive.
+              </p>
+            </blockquote>
+            <i class="fmts-card__rule" aria-hidden="true"></i>
+            <footer class="fmts-card__foot">
+              <img class="fmts-card__avatar" src="images/banner2.jpeg" alt="Suresh Yadav, farmer from Indore"
+                loading="lazy">
+              <div class="fmts-card__who">
+                <strong class="fmts-card__name">Suresh Yadav</strong>
+                <span class="fmts-card__loc">Indore, Madhya Pradesh</span>
+                <span class="fmts-card__role">Farmer</span>
+              </div>
+              <span class="fmts-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+            </footer>
+          </article>
+
+          <article class="fmts-card" data-fmts-card>
+            <span class="fmts-card__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="fmts-card__quote">
+              <p>Good quality products and practical advice. Our crop quality and market value have improved
+                significantly.</p>
+            </blockquote>
+            <i class="fmts-card__rule" aria-hidden="true"></i>
+            <footer class="fmts-card__foot">
+              <img class="fmts-card__avatar" src="images/banner3.jpeg" alt="Imran Shaikh, farmer from Surat"
+                loading="lazy">
+              <div class="fmts-card__who">
+                <strong class="fmts-card__name">Imran Shaikh</strong>
+                <span class="fmts-card__loc">Surat, Gujarat</span>
+                <span class="fmts-card__role">Farmer</span>
+              </div>
+              <span class="fmts-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Let's Connect (fmgc) -->
+    <section class="fmgc" id="lets-connect">
+      <!-- full-bleed background photo (decorative) -->
+      <picture class="fmgc__bg">
+        <img class="fmgc__bg-img" src="images/greenhouse-connect.jpg" alt="" aria-hidden="true" loading="lazy"
+          width="1376" height="768">
+      </picture>
+
+      <div class="fmgc__inner">
+        <div class="fmgc-card">
+          <span class="fmgc-eyebrow"><i class="fmgc-eyebrow__line"></i>Let’s Connect<i
+              class="fmgc-eyebrow__line"></i></span>
+
+          <h2 class="fm-heading ">Ready to bring your <br> <em class="fmgc__accent">farming vision</em> to
+            life?</h2>
+
+          <p class="fm-text fmgc__text">Share your requirements and our experts will guide you <br> with the right
+            solution for your land, climate and goals.</p>
+
+          <div class="fmgc__actions">
+            <a href="#contact" class="fm-cta-btn">
+              Contact US
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="afm-faq">
+      <div class="afm-faq__container">
+        <div class="afm-faq__header">
+          <span class="afm-faq__tag">FAQs</span>
+          <h2 class="afm-faq__title fm-heading">Frequently Asked Questions</h2>
+          <p class="afm-faq__desc fm-text">Find answers to common questions about our premium organic farming
+            practices
+            and
+            services.</p>
+        </div>
+
+        <div class="afm-faq__list" id="afmFaqList">
+          <div class="afm-faq__item">
+            <button class="afm-faq__question" aria-expanded="false">
+              What types of crops do you specialize in?
+              <span class="afm-faq__icon"></span>
+            </button>
+            <div class="afm-faq__answer">
+              <div class="afm-faq__answer-inner">
+                We specialize in a wide range of exotic leafy greens, vine crops, berries, and medicinal plants, all
+                grown using advanced hydroponic and organic methods tailored to maximize yield and quality.
+              </div>
+            </div>
+          </div>
+          <div class="afm-faq__item">
+            <button class="afm-faq__question" aria-expanded="false">
+              How do you ensure your farming is sustainable?
+              <span class="afm-faq__icon"></span>
+            </button>
+            <div class="afm-faq__answer">
+              <div class="afm-faq__answer-inner">
+                Our operations integrate renewable energy, precise water management through recycling systems, and
+                strict organic protocols to maintain soil health and minimize environmental impact.
+              </div>
+            </div>
+          </div>
+          <div class="afm-faq__item">
+            <button class="afm-faq__question" aria-expanded="false">
+              Can you help set up a commercial farm from scratch?
+              <span class="afm-faq__icon"></span>
+            </button>
+            <div class="afm-faq__answer">
+              <div class="afm-faq__answer-inner">
+                Absolutely. We offer complete turnkey farm development services, from initial land assessment and
+                agronomy support to installing protected structures and automation systems.
+              </div>
+            </div>
+          </div>
+          <div class="afm-faq__item">
+            <button class="afm-faq__question" aria-expanded="false">
+              Do you offer training for aspiring agronomists?
+              <span class="afm-faq__icon"></span>
+            </button>
+            <div class="afm-faq__answer">
+              <div class="afm-faq__answer-inner">
+                Yes, our Academy provides both online and offline training programs, alongside live webinars, to equip
+                individuals with the skills needed for modern protected farming.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="afm-ft">
+      <div class="afm-ft__social-bar">
+        <div class="afm-ft__social-container">
+          <span>Follow our social :</span>
+          <div class="afm-ft__social-links">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg></a>
+            <a href="#" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+              </svg></a>
+            <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29.02 29.02 0 001 11.75a29.02 29.02 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29.02 29.02 0 00.46-5.33 29.02 29.02 0 00-.46-5.33zM9.75 15.02V8.48L15.5 11.75l-5.75 3.27z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="afm-ft__main">
+        <div class="afm-ft__container">
+          <div class="afm-ft__col afm-ft__col--brand">
+            <a href="{{ route('home') }}" class="afm-brand afm-ft__brand">
+              <span class="afm-brand__mark">
+                <img src="images/footerl.png" alt="Future Agri Infra logo"
+                  style="height: 54px; width: auto; object-fit: contain;">
+              </span>
+
+            </a>
+            <p class="afm-ft__desc">Future Agri Infra is dedicated to sustainable agriculture and premium-quality
+              turnkey protected-farming projects.</p>
+            <form class="afm-ft__form">
+              <input type="email" placeholder="Email" class="afm-ft__input" required>
+              <button type="submit" class="afm-ft__submit">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                Subscribe Newsletter
+              </button>
+            </form>
+          </div>
+
+          <div class="afm-ft__col">
+            <h4 class="afm-ft__heading">Solutions</h4>
+            <ul class="afm-ft__list">
+              <li><a href="#">Smart Farming</a></li>
+              <li><a href="#">Renewable Energy</a></li>
+              <li><a href="#">Precision Agriculture</a></li>
+              <li><a href="#">Water Management</a></li>
+              <li><a href="#">Soil Optimization</a></li>
+              <li><a href="#">Greenhouse Systems</a></li>
+            </ul>
+          </div>
+
+          <div class="afm-ft__col">
+            <h4 class="afm-ft__heading">Support</h4>
+            <ul class="afm-ft__list">
+              <li><a href="#">Contact Support</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Order Tracking</a></li>
+              <li><a href="#">Returns &amp; Refunds</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="afm-ft__col">
+            <h4 class="afm-ft__heading">Company</h4>
+            <ul class="afm-ft__list">
+              <li><a href="#">About Future Agri Infra</a></li>
+              <li><a href="#">Our Farm</a></li>
+              <li><a href="#">Sustainability Commitment</a></li>
+              <li><a href="#">Quality Standards</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press &amp; Media</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="afm-ft__bottom">
+        <div class="afm-ft__bottom-container">
+          <div class="afm-ft__legal">
+            <a href="{{ route('legal.terms') }}">Terms &amp; Conditions</a>
+            <a href="{{ route('legal.privacy') }}">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+          <div class="afm-ft__copy">
+            Copyright &copy; 2026 Future Agri Infra, All rights reserved. Created by Crescita Software.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  </div>
+@endsection

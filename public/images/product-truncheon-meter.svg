@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none">
+  <defs>
+    <linearGradient id="shaft" x1="98" y1="29" x2="140" y2="139" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C75C3"/>
+      <stop offset=".52" stop-color="#F9FBF8"/>
+      <stop offset="1" stop-color="#D8E2E0"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="120" cy="160" rx="43" ry="7" fill="#163B35" opacity=".12"/>
+  <path d="M99 35a21 21 0 0 1 42 0v91a21 21 0 0 1-42 0V35Z" fill="url(#shaft)" stroke="#AABCC0" stroke-width="3"/>
+  <path d="M100 34a20 20 0 0 1 40 0v15h-40V34Z" fill="#111D28" stroke="#293D48" stroke-width="2"/>
+  <rect x="105" y="62" width="30" height="18" rx="5" fill="#EAF1EF" stroke="#C8D6D5"/>
+  <path d="M111 71h18" stroke="#0E6DAD" stroke-width="3" stroke-linecap="round"/>
+  <path d="M104 93h32" stroke="#0C75C3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M102 121h36" stroke="#0C75C3" stroke-width="5"/>
+  <path d="M104 141h32l-5 14h-22l-5-14Z" fill="#182B35"/>
+</svg>

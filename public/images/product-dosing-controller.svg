@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none">
+  <defs>
+    <linearGradient id="cabinet" x1="66" y1="17" x2="176" y2="158" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDFEFC"/>
+      <stop offset="1" stop-color="#D5DFDE"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="120" cy="163" rx="61" ry="7" fill="#163B35" opacity=".12"/>
+  <rect x="69" y="15" width="102" height="138" rx="12" fill="url(#cabinet)" stroke="#A9BABC" stroke-width="3"/>
+  <rect x="82" y="29" width="76" height="54" rx="7" fill="#173C52"/>
+  <rect x="88" y="35" width="64" height="42" rx="4" fill="#0C5F8F"/>
+  <path d="M95 66V57l10-7 9 5 10-10 9 7 11-5" stroke="#77D59A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="94" cy="98" r="6" fill="#0B75BD"/>
+  <circle cx="120" cy="98" r="6" fill="#74BD12"/>
+  <circle cx="146" cy="98" r="6" fill="#0B75BD"/>
+  <rect x="83" y="116" width="74" height="22" rx="5" fill="#E6ECE9" stroke="#BCCAC8"/>
+  <path d="M95 127h10m8 0h10m8 0h10" stroke="#71878A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M84 153v7m72-7v7" stroke="#71878A" stroke-width="3" stroke-linecap="round"/>
+</svg>
