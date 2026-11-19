@@ -644,8 +644,4 @@ WHAT DOES AUTO FERTIGATION DO?<i class="fmpj-eyebrow__line"></i></span>
         </div>
         <!-- next block goes here -->
       </section>
-		</main>
-
-   
-  </div>
 @endsection

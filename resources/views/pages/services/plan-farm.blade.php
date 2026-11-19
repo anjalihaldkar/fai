@@ -1396,10 +1396,4 @@
 
 			</div>
 		</section>
-
-
-
-
-		
-	</div>
 @endsection

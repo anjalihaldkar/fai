@@ -617,8 +617,6 @@
         </section>
 
       </div>
-    </main>
-
     <!-- Copy Link Notification Toast -->
     <div class="fmbd-toast" data-fmbd-toast role="status" aria-live="polite">
       ✓ Article link copied to clipboard!
@@ -626,5 +624,4 @@
 
     <!-- ========== FOOTER ========== -->
     
-  </div>
-@endsection
+  @endsection

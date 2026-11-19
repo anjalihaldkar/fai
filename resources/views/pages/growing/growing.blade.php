@@ -904,8 +904,4 @@
           </ul>
         </div>
       </section>
-	</main>
-
-   
-  </div>
 @endsection

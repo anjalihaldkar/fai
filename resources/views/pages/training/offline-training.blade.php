@@ -666,8 +666,4 @@
 
         </div>
       </section>
-    </main>
-
-    
-  </div>
 @endsection

@@ -620,9 +620,4 @@
 
         </div><!-- /fmwf__inner -->
       </section>
-
-		</main>
-
-   
-  </div>
 @endsection

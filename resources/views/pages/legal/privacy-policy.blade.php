@@ -413,9 +413,4 @@
           </article>
         </div>
       </div>
-    </main>
-
-    <!-- Standard Site Footer -->
-    
-  </div>
-@endsection
+    @endsection

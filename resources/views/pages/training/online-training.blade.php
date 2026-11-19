@@ -1014,18 +1014,7 @@
           </div>
         </div>
       </section>
-
-    </main>
-
-    
-  </div>
-
-  
-  
-  
-  
-
-  <script>
+<script>
     (function () {
       'use strict';
       var root = document.querySelector('[data-fmtb]');

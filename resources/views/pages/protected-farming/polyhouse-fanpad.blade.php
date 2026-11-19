@@ -1033,9 +1033,6 @@
         </div>
         <!-- next block goes here -->
       </section>
-    </main>
-    
-  </div>
 
   
   
