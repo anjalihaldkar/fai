@@ -88,6 +88,7 @@ Route::controller(TrainingController::class)->group(function () {
     Route::get('/online-training', 'online')->name('training.online');
     Route::get('/offline-training', 'offline')->name('training.offline');
     Route::get('/training-detail', 'detail')->name('training.detail');
+    Route::get('/live-webinar', 'liveWebinar')->name('training.live-webinar');
 });
 
 // Blog

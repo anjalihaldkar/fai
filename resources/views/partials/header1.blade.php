@@ -116,7 +116,7 @@
             <ul class="afm-dropdown">
                 <li><a href="{{ route('training.online') }}" class="afm-dropdown__link">Online Training</a></li>
                 <li><a href="{{ route('training.offline') }}" class="afm-dropdown__link">Offline Training</a></li>
-                <li><a href="{{ route('home') }}#academy-training" class="afm-dropdown__link">Live Webinar</a></li>
+                <li><a href="{{ route('training.live-webinar') }}" class="afm-dropdown__link">Live Webinar</a></li>
             </ul>
         </li>
 

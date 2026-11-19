@@ -18,4 +18,9 @@ class TrainingController extends Controller
     {
         return view('pages.training.training-detail');
     }
+
+    public function liveWebinar()
+    {
+        return view('pages.training.live-webiner');
+    }
 }
