@@ -49,7 +49,7 @@
             <div class="afm-mega">
                 <div class="afm-mega__grid">
                     <div class="afm-mega__col">
-                        <a href="{{ route('protected-farming.compare-structures') }}" class="afm-mega__col-title">Protected Structures</a>
+                        <a href="{{ route('protected-farming.protected-structure') }}#growing-environment" class="afm-mega__col-title">Protected Structures</a>
                         <a href="{{ route('protected-farming.polyhouse-fanpad') }}#growing-environment" class="afm-mega__link">Fan &amp; Pad Polyhouse</a>
                         <a href="{{ route('protected-farming.compare-structures') }}#protected-structures-explore" class="afm-mega__link">Naturally Ventilated Polyhouse (NVPH)</a>
                         <a href="{{ route('protected-farming.compare-structures') }}#protected-structures-explore" class="afm-mega__link">Nethouse</a>
