@@ -50,8 +50,6 @@ Route::controller(ServiceController::class)->group(function () {
 Route::controller(ProtectedFarmingController::class)->group(function () {
     Route::get('/protected-farming', 'protectedFarming')->name('protected-farming.index');
     Route::get('/protected-farming-structure', 'protectedFarmingStructure')->name('protected-farming.structure');
-    Route::get('/protected-structure', 'protectedStructure')->name('protected-farming.compare-structures');
-    Route::get('/protected-structure', 'protectedStructure')->name('protected-structure');
     Route::get('/protected-structure', 'protectedStructure')->name('protected-farming.protected-structure');
     Route::get('/polyhouse-fanpad', 'polyhouseFanpad')->name('protected-farming.polyhouse-fanpad');
 });

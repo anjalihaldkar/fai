@@ -30,7 +30,7 @@
             <div class="afm-ft__col">
                 <h4 class="afm-ft__heading">Solutions</h4>
                 <ul class="afm-ft__list">
-                    <li><a href="{{ route('protected-farming.compare-structures') }}">Smart Farming</a></li>
+                    <li><a href="{{ route('protected-farming.protected-structure') }}">Smart Farming</a></li>
                     <li><a href="{{ route('services.turnkey') }}">Renewable Energy</a></li>
                     <li><a href="{{ route('growing.index') }}">Precision Agriculture</a></li>
                     <li><a href="{{ route('automation.index') }}">Water Management</a></li>
