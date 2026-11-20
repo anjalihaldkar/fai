@@ -149,6 +149,257 @@
     </ul>
 
   </div>
+</section>
+
+<section class="fmwa" id="workshop-agenda">
+  <div class="fmwa__inner">
+
+    <header class="fmwa__head">
+      <span class="fmwa-eyebrow"><span class="fmwa-eyebrow__label">Workshop Agenda</span><i class="fmwa-eyebrow__line"></i></span>
+      <h2 class="fm-heading fmwa__title">Detailed Learning, Step by Step</h2>
+      <p class="fm-text fmwa__text">A comprehensive two-day program covering technical, operational, commercial and marketing aspects.</p>
+    </header>
+
+    <div class="fmwa__side">
+      <div class="fmwa__intro">
+        <h3 class="fm-heading fmwa__big">Workshop<br><span class="fmwa__accent">Agenda</span></h3>
+        <i class="fmwa__rule" aria-hidden="true"></i>
+        <p class="fm-text fmwa__lead">Learn, Apply and Grow<br>with Expert Guidance</p>
+      </div>
+      <figure class="fmwa__media">
+        <img src="{{ asset('images/res-greenhouse-design.jpg') }}" alt="Large glass greenhouse with rows of fresh lettuce growing in the foreground" class="fmwa__img" loading="lazy" width="900" height="460">
+      </figure>
+    </div>
+
+    <div class="fmwa__days">
+
+      <section class="fmwa-day fmwa-day--1" aria-label="Day 01: Technical and Commercial Training">
+        <header class="fmwa-day__head">
+          <span class="fmwa-day__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </span>
+          <span class="fmwa-day__name">Day 01</span>
+          <span class="fmwa-day__title">Technical &amp; Commercial Training</span>
+        </header>
+        <div class="fmwa-rows">
+          <details class="fmwa-row" name="fmwa-day1">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">01</span>
+              <span class="fmwa-row__title">Hydroponics Fundamentals</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">How hydroponic growing works, how it differs from soil farming and where it fits commercially.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day1">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">02</span>
+              <span class="fmwa-row__title">Hydroponic Systems</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">Deep Water Culture, Nutrient Film Technique, Drip, and Dutch Bucket systems explained with setup comparisons.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day1">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">03</span>
+              <span class="fmwa-row__title">Protected Structures &amp; Farm Design</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">Naturally ventilated polyhouses, fan &amp; pad climate control systems, site orientation and layout engineering.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day1">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">04</span>
+              <span class="fmwa-row__title">Water, Nutrients &amp; Automation</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">EC, pH management, dosing systems, water quality parameters, and fertigation automation controllers.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day1">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">05</span>
+              <span class="fmwa-row__title">Crop &amp; Market Selection</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">High-value crops, market demand cycles, yield expectations, and seasonal planting calendars.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day1">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">06</span>
+              <span class="fmwa-row__title">Commercial Farm Economics</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">CAPEX, OPEX, payback periods, cost optimization, subsidy schemes, and return on investment models.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day1">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">07</span>
+              <span class="fmwa-row__title">Sales &amp; Marketing</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">Direct-to-consumer, B2B institutional supply, packaging standards, and building resilient distribution channels.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="fmwa-day fmwa-day--2" aria-label="Day 02: Practical Farm Training">
+        <header class="fmwa-day__head">
+          <span class="fmwa-day__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </span>
+          <span class="fmwa-day__name">Day 02</span>
+          <span class="fmwa-day__title">Practical Farm Training</span>
+        </header>
+        <div class="fmwa-rows">
+          <details class="fmwa-row" name="fmwa-day2">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">01</span>
+              <span class="fmwa-row__title">Farm Operations &amp; Crop Management</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">Daily operational routines, seedling nursery management, transplanting protocols, and vine training.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day2">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">02</span>
+              <span class="fmwa-row__title">Hydroponic Setup &amp; Maintenance</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">System plumbing, plumbing hygiene, pump maintenance, pipe flushing, and sterilization procedures.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day2">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">03</span>
+              <span class="fmwa-row__title">Nutrient &amp; pH Management</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">Hands-on formulation mixing, stock solution preparation, diagnostic monitoring, and corrective dosing.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day2">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">04</span>
+              <span class="fmwa-row__title">Harvesting &amp; Post-Harvest Handling</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">Peak harvest timings, temperature-controlled sorting, grading criteria, and shelf-life extension.</p>
+            </div>
+          </details>
+
+          <details class="fmwa-row" name="fmwa-day2">
+            <summary class="fmwa-row__sum">
+              <span class="fmwa-row__no">05</span>
+              <span class="fmwa-row__title">Pest &amp; Disease Management</span>
+              <span class="fmwa-row__plus" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="fmwa-h" d="M5 12h14"/>
+                  <path class="fmwa-v" d="M12 5v14"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="fmwa-row__panel">
+              <p class="fm-text fmwa-row__text">Integrated pest management (IPM), biological controls, common fungal/bacterial vectors, and preventive hygiene.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
   <!-- next block goes here -->
 </section>
 @endsection

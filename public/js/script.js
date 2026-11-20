@@ -2589,6 +2589,30 @@
 
     // Legal / Policy TOC tracking
     initLegalToc();
+
+    // Workshop Agenda Accordion
+    initWorkshopAgenda();
+  }
+
+  /* ------------------------------------------------------------------------
+     23. Workshop Agenda Accordion (.fmwa)
+     ------------------------------------------------------------------------ */
+  function initWorkshopAgenda() {
+    const rows = $$('.fmwa-row');
+    if (!rows.length) return;
+
+    rows.forEach((row) => {
+      row.addEventListener('toggle', () => {
+        if (!row.open) return;
+        const groupName = row.getAttribute('name');
+        if (!groupName) return;
+        rows.forEach((otherRow) => {
+          if (otherRow !== row && otherRow.getAttribute('name') === groupName && otherRow.open) {
+            otherRow.open = false;
+          }
+        });
+      });
+    });
   }
 
   /* ------------------------------------------------------------------------
