@@ -39,9 +39,6 @@
     </div>
   </section>
 
-
-
-  <main>
     <section class="fmlj" id="learning-journey">
       <div class="fmlj__inner">
 

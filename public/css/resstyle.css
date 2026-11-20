@@ -2891,6 +2891,22 @@
   }
 }
 
+/* Online training: show only the featured professional course. */
+.online-training-page #online-training .fmot-plan:first-child,
+.online-training-page #online-training .fmot-plan:nth-child(3) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .online-training-page #online-training .fmot-plans {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .online-training-page #online-training .fmot-plan:nth-child(2) {
+    grid-column: 2;
+  }
+}
+
 /* fmpj */
 @media (max-width: 1099px) {
   .fmpj__inner {
@@ -8172,14 +8188,15 @@
    matching the home page alignment at 100% and 80% screen zoom.
    ============================================================ */
 
-/* Desktop & large screens (100% & 80% zoom): lock all 5 sections to 1400px container */
+/* Desktop & large screens (100% & 80% zoom): lock all sections to 1400px container */
 @media (min-width: 1100px) {
 
   .offline-training-page #about-us .fmab__inner,
   .offline-training-page #learning-journey .fmlj__inner,
   .offline-training-page #integrated-solutions .fmsc__inner,
   .offline-training-page #workshop-outcomes .fmwo__inner,
-  .offline-training-page #workshop-details .fmwd__inner {
+  .offline-training-page #workshop-details .fmwd__inner,
+  .offline-training-page #gallery .fmgl__inner {
     width: calc(100% - 2 * var(--afm-section-rail));
     max-width: 1400px;
     margin-inline: auto;
@@ -8202,7 +8219,8 @@
   .offline-training-page #learning-journey .fmlj__inner,
   .offline-training-page #integrated-solutions .fmsc__inner,
   .offline-training-page #workshop-outcomes .fmwo__inner,
-  .offline-training-page #workshop-details .fmwd__inner {
+  .offline-training-page #workshop-details .fmwd__inner,
+  .offline-training-page #gallery .fmgl__inner {
     width: 100%;
     max-width: 100%;
     padding-inline: var(--afm-section-rail);
@@ -8224,7 +8242,8 @@
   .offline-training-page #learning-journey .fmlj__inner,
   .offline-training-page #integrated-solutions .fmsc__inner,
   .offline-training-page #workshop-outcomes .fmwo__inner,
-  .offline-training-page #workshop-details .fmwd__inner {
+  .offline-training-page #workshop-details .fmwd__inner,
+  .offline-training-page #gallery .fmgl__inner {
     padding-inline: clamp(16px, 4vw, 32px);
   }
 
