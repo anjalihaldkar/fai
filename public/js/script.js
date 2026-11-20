@@ -2595,6 +2595,9 @@
 
     // Model Comparison Farm Size Selector
     initModelComparison();
+
+    // Gallery Toggle
+    initGalleryToggle();
   }
 
   /* ------------------------------------------------------------------------
@@ -2726,6 +2729,31 @@
           tds[3].textContent = item.pay;
         }
       });
+    });
+  }
+
+  /* ------------------------------------------------------------------------
+     25. Gallery Toggle Keyboard & Accessibility (.fmgl)
+     ------------------------------------------------------------------------ */
+  function initGalleryToggle() {
+    const chk = $('#fmgl-toggle');
+    const btn = $('.fmgl-btn');
+    if (!chk || !btn) return;
+
+    btn.setAttribute('tabindex', '0');
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-expanded', String(chk.checked));
+
+    chk.addEventListener('change', () => {
+      btn.setAttribute('aria-expanded', String(chk.checked));
+    });
+
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        chk.checked = !chk.checked;
+        chk.dispatchEvent(new Event('change', { bubbles: true }));
+      }
     });
   }
 
