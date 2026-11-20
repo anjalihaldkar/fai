@@ -8196,6 +8196,7 @@
   .offline-training-page #integrated-solutions .fmsc__inner,
   .offline-training-page #workshop-outcomes .fmwo__inner,
   .offline-training-page #workshop-details .fmwd__inner,
+  .offline-training-page #workshop-agenda .fmwa__inner,
   .offline-training-page #gallery .fmgl__inner {
     width: calc(100% - 2 * var(--afm-section-rail));
     max-width: 1400px;
@@ -8205,6 +8206,17 @@
 
   .offline-training-page #about-us .fmab__inner {
     padding-block: clamp(40px, 5vw, 80px);
+  }
+
+  .offline-training-page #workshop-agenda .fmwa__inner {
+    padding-block: clamp(36px, 4vw, 64px);
+    column-gap: clamp(24px, 3.2vw, 48px);
+  }
+
+  .offline-training-page #workshop-agenda .fmwa__head,
+  .offline-training-page #workshop-agenda .fmwa__intro,
+  .offline-training-page #workshop-agenda .fmwa__media {
+    padding-left: 0;
   }
 
   .offline-training-page #integrated-solutions .fmsc__head {
@@ -8220,6 +8232,7 @@
   .offline-training-page #integrated-solutions .fmsc__inner,
   .offline-training-page #workshop-outcomes .fmwo__inner,
   .offline-training-page #workshop-details .fmwd__inner,
+  .offline-training-page #workshop-agenda .fmwa__inner,
   .offline-training-page #gallery .fmgl__inner {
     width: 100%;
     max-width: 100%;
@@ -8243,6 +8256,7 @@
   .offline-training-page #integrated-solutions .fmsc__inner,
   .offline-training-page #workshop-outcomes .fmwo__inner,
   .offline-training-page #workshop-details .fmwd__inner,
+  .offline-training-page #workshop-agenda .fmwa__inner,
   .offline-training-page #gallery .fmgl__inner {
     padding-inline: clamp(16px, 4vw, 32px);
   }
