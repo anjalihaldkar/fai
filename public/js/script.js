@@ -2592,6 +2592,9 @@
 
     // Workshop Agenda Accordion
     initWorkshopAgenda();
+
+    // Model Comparison Farm Size Selector
+    initModelComparison();
   }
 
   /* ------------------------------------------------------------------------
@@ -2646,6 +2649,84 @@
     );
 
     sections.forEach((sec) => observer.observe(sec));
+  }
+
+  /* ------------------------------------------------------------------------
+     24. Model Comparison Farm Size Selector (.fmmg)
+     ------------------------------------------------------------------------ */
+  function initModelComparison() {
+    const select = $('.fmmg-pick__select');
+    const table = $('.fmmg-t');
+    if (!select || !table) return;
+
+    const dataByAcre = {
+      '0.25': [
+        { inv: '₹ 30 – 40 L', inc: '₹ 9 – 12 L', roi: '24 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 75 L – 1.0 Cr', inc: '₹ 22.5 – 30 L', roi: '28 – 36%', pay: '2.5 – 3.5 Years' },
+        { inv: '₹ 22 – 30 L', inc: '₹ 7 – 9.5 L', roi: '26 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 15 – 22.5 L', inc: '₹ 4.5 – 6.5 L', roi: '24 – 30%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 10 – 17.5 L', inc: '₹ 3 – 5 L', roi: '22 – 28%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 1.0 – 1.5 Cr', inc: '₹ 30 – 45 L', roi: '30 – 38%', pay: '2.5 – 3.5 Years' }
+      ],
+      '0.5': [
+        { inv: '₹ 60 – 80 L', inc: '₹ 18 – 24 L', roi: '24 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 1.5 – 2.0 Cr', inc: '₹ 45 – 60 L', roi: '28 – 36%', pay: '2.5 – 3.5 Years' },
+        { inv: '₹ 45 – 60 L', inc: '₹ 14 – 19 L', roi: '26 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 30 – 45 L', inc: '₹ 9 – 13 L', roi: '24 – 30%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 20 – 35 L', inc: '₹ 6 – 10 L', roi: '22 – 28%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 2.0 – 3.0 Cr', inc: '₹ 60 – 90 L', roi: '30 – 38%', pay: '2.5 – 3.5 Years' }
+      ],
+      '1': [
+        { inv: '₹ 1.2 – 1.6 Cr', inc: '₹ 36 – 48 L', roi: '24 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 3.0 – 4.0 Cr', inc: '₹ 90 – 120 L', roi: '28 – 36%', pay: '2.5 – 3.5 Years' },
+        { inv: '₹ 90 L – 1.2 Cr', inc: '₹ 28 – 38 L', roi: '26 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 60 – 90 L', inc: '₹ 18 – 26 L', roi: '24 – 30%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 40 – 70 L', inc: '₹ 12 – 20 L', roi: '22 – 28%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 4.0 – 6.0 Cr', inc: '₹ 1.2 – 1.8 Cr', roi: '30 – 38%', pay: '2.5 – 3.5 Years' }
+      ],
+      '2': [
+        { inv: '₹ 2.4 – 3.2 Cr', inc: '₹ 72 – 96 L', roi: '24 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 6.0 – 8.0 Cr', inc: '₹ 1.8 – 2.4 Cr', roi: '28 – 36%', pay: '2.5 – 3.5 Years' },
+        { inv: '₹ 1.8 – 2.4 Cr', inc: '₹ 56 – 76 L', roi: '26 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 1.2 – 1.8 Cr', inc: '₹ 36 – 52 L', roi: '24 – 30%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 80 L – 1.4 Cr', inc: '₹ 24 – 40 L', roi: '22 – 28%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 8.0 – 12.0 Cr', inc: '₹ 2.4 – 3.6 Cr', roi: '30 – 38%', pay: '2.5 – 3.5 Years' }
+      ],
+      '5': [
+        { inv: '₹ 6.0 – 8.0 Cr', inc: '₹ 1.8 – 2.4 Cr', roi: '24 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 15.0 – 20.0 Cr', inc: '₹ 4.5 – 6.0 Cr', roi: '28 – 36%', pay: '2.5 – 3.5 Years' },
+        { inv: '₹ 4.5 – 6.0 Cr', inc: '₹ 1.4 – 1.9 Cr', roi: '26 – 32%', pay: '3.0 – 4.0 Years' },
+        { inv: '₹ 3.0 – 4.5 Cr', inc: '₹ 90 L – 1.3 Cr', roi: '24 – 30%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 2.0 – 3.5 Cr', inc: '₹ 60 L – 1.0 Cr', roi: '22 – 28%', pay: '3.0 – 4.5 Years' },
+        { inv: '₹ 20.0 – 30.0 Cr', inc: '₹ 6.0 – 9.0 Cr', roi: '30 – 38%', pay: '2.5 – 3.5 Years' }
+      ]
+    };
+
+    const rows = $$('tbody tr', table);
+    const caption = $('.fmmg-sr', table);
+
+    select.addEventListener('change', () => {
+      const val = select.value;
+      const rowsData = dataByAcre[val];
+      if (!rowsData) return;
+
+      const selectedText = select.options[select.selectedIndex].text.split('(')[0].trim();
+      if (caption) {
+        caption.textContent = `Comparison of six farming models for a ${selectedText} farm: approximate investment, annual income, yearly ROI and payback period`;
+      }
+
+      rows.forEach((row, idx) => {
+        const item = rowsData[idx];
+        if (!item) return;
+        const tds = $$('td', row);
+        if (tds.length >= 4) {
+          tds[0].textContent = item.inv;
+          tds[1].textContent = item.inc;
+          tds[2].textContent = item.roi;
+          tds[3].textContent = item.pay;
+        }
+      });
+    });
   }
 
   if (document.readyState === 'loading') {
