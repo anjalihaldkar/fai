@@ -1853,4 +1853,88 @@
         </div>
       </div>
     </section>
+
+    <!-- Free Consultation Modal Popup -->
+    <dialog class="fmpu" id="fmpu" data-fmpu-delay="5000" aria-labelledby="fmpu-title" aria-describedby="fmpu-text">
+      <div class="fmpu-card">
+
+        <button type="button" class="fmpu-close" aria-label="Close popup" data-fmpu-close>
+          <span class="fmpu-close__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </span>
+        </button>
+
+        <figure class="fmpu-media">
+          <img src="{{ asset('images/res-greenhouse-design.jpg') }}" alt="Rows of fresh lettuce growing on hydroponic channels inside a greenhouse" class="fmpu-media__img" width="1376" height="768">
+        </figure>
+
+        <div class="fmpu-body">
+          <span class="fmpu-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 20h10" />
+              <path d="M12 20v-8" />
+              <path d="M12 12a5 5 0 0 1 5-5c0 4-2 7-5 7z" />
+              <path d="M12 15a5 5 0 0 0-5-5c0 4 2 7 5 7z" />
+            </svg>
+          </span>
+          <h2 class="fm-heading fmpu__title" id="fmpu-title">Build Your<br><span class="fmpu__accent">Smart Farm Today!</span></h2>
+          <p class="fm-text fmpu__text" id="fmpu-text">Get expert guidance and modern farming solutions.</p>
+          <a href="#free-consultation" class="fm-cta-btn fmpu__btn" data-fmpu-close>
+            <span class="fmpu__btn-label">Get Free Consultation</span>
+            <span class="fmpu__btn-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </dialog>
+
+    <script>
+    (function () {
+      var dlg = document.getElementById('fmpu');
+      if (!dlg || typeof dlg.showModal !== 'function') return;
+      var KEY = 'fmpu-seen';
+      var seen = false;
+      try { seen = window.sessionStorage.getItem(KEY) === '1'; } catch (e) {}
+      if (seen) return;
+
+      var delay = parseInt(dlg.getAttribute('data-fmpu-delay'), 10);
+      if (isNaN(delay) || delay < 0) delay = 5000;
+      var root = document.documentElement;
+      var timer = null;
+      var opener = null;
+
+      function open() {
+        if (dlg.open) return;
+        if (document.querySelector('dialog[open]')) { timer = window.setTimeout(open, 3000); return; }
+        opener = document.activeElement;
+        dlg.showModal();
+        root.classList.add('fmpu-lock');
+        try { window.sessionStorage.setItem(KEY, '1'); } catch (e) {}
+      }
+      function close() {
+        if (dlg.open) dlg.close();
+      }
+
+      dlg.addEventListener('close', function () {
+        root.classList.remove('fmpu-lock');
+        if (opener && typeof opener.focus === 'function' && document.body.contains(opener)) { try { opener.focus(); } catch (e) {} }
+      });
+      dlg.addEventListener('click', function (ev) {
+        if (ev.target === dlg) { close(); return; }
+        var btn = ev.target.closest ? ev.target.closest('[data-fmpu-close]') : null;
+        if (btn && dlg.contains(btn)) close();
+      });
+      window.addEventListener('pagehide', function () { if (timer) window.clearTimeout(timer); });
+
+      timer = window.setTimeout(open, delay);
+    })();
+    </script>
 @endsection

@@ -39387,3 +39387,367 @@ a.fai-info-value:hover {
     transform: none !important;
   }
 }
+
+/* ===================================================================
+   FREE CONSULTATION MODAL POPUP (.fmpu)
+   =================================================================== */
+dialog.fmpu {
+  --fmpu-navy: var(--fm-color-heading);
+  --fmpu-green: var(--fm-color-btn-bg);
+  --fmpu-on-dark: var(--fm-color-btn-text);
+  --fmpu-lime: color-mix(in srgb, var(--fm-color-btn-bg) 55%, #fff);
+  --fmpu-muted: color-mix(in srgb, var(--fm-color-text) 90%, transparent);
+  --fmpu-card-line: color-mix(in srgb, var(--fm-color-heading) 8%, transparent);
+  --fmpu-glow: color-mix(in srgb, var(--fm-color-btn-bg) 9%, transparent);
+  --fmpu-badge-bg: color-mix(in srgb, var(--fm-color-btn-bg) 10%, #fff);
+  --fmpu-badge-ring: color-mix(in srgb, var(--fm-color-btn-bg) 35%, #fff);
+  --fmpu-backdrop: color-mix(in srgb, var(--fm-color-heading) 38%, transparent);
+  --fmpu-shadow: color-mix(in srgb, var(--fm-color-heading) 35%, transparent);
+  --fmpu-r: clamp(18px, 4.6vw, 40px);
+  --fmpu-ease: cubic-bezier(.2, .8, .2, 1);
+
+  box-sizing: border-box;
+  width: min(94vw, 780px);
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: clamp(18px, 3.2vw, 30px) clamp(12px, 2.2vw, 22px) clamp(12px, 2.2vw, 22px) clamp(12px, 2.2vw, 22px);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  overflow: visible;
+}
+
+dialog.fmpu::backdrop {
+  background: var(--fmpu-backdrop);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+dialog.fmpu[open] {
+  animation: fmpu-in .45s var(--fmpu-ease);
+}
+
+dialog.fmpu[open]::backdrop {
+  animation: fmpu-fade .45s ease;
+}
+
+@keyframes fmpu-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fmpu-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html.fmpu-lock {
+  overflow: hidden;
+}
+
+dialog.fmpu *,
+dialog.fmpu *::before,
+dialog.fmpu *::after {
+  box-sizing: border-box;
+}
+
+/* Card */
+dialog.fmpu .fmpu-card {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 330fr) minmax(0, 407fr);
+  column-gap: 0;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  background-image: radial-gradient(ellipse 40% 50% at 100% 100%, var(--fmpu-glow), transparent 75%);
+  border: 1px solid var(--fmpu-card-line);
+  border-radius: var(--fmpu-r);
+  box-shadow: 0 34px 60px -30px var(--fmpu-shadow);
+  overflow: visible;
+}
+
+/* Photo */
+dialog.fmpu .fmpu-media {
+  margin: 0;
+  min-width: 0;
+  display: grid;
+}
+
+dialog.fmpu .fmpu-media__img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--fmpu-r) 56% 56% var(--fmpu-r) / var(--fmpu-r) 50% 50% var(--fmpu-r);
+  border-right: clamp(3px, .8vw, 6px) solid var(--fmpu-green);
+}
+
+/* Body */
+dialog.fmpu .fmpu-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  gap: clamp(6px, 1.3vw, 14px);
+  padding: clamp(14px, 2.8vw, 26px) clamp(14px, 2.6vw, 26px) clamp(14px, 2.8vw, 26px) clamp(10px, 2vw, 18px);
+}
+
+/* Badge */
+dialog.fmpu .fmpu-badge {
+  display: grid;
+  place-items: center;
+  width: clamp(40px, 7.6vw, 66px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--fmpu-badge-bg);
+  border: clamp(2px, .4vw, 3px) solid var(--fmpu-badge-ring);
+  color: var(--fmpu-green);
+  box-shadow: 0 0 0 clamp(4px, .9vw, 8px) var(--fmpu-badge-bg);
+  margin-bottom: clamp(4px, .9vw, 10px);
+}
+
+dialog.fmpu .fmpu-badge svg {
+  width: 52%;
+  height: 52%;
+  display: block;
+}
+
+/* Headline */
+dialog.fmpu .fmpu__title {
+  font-size: clamp(20px, 4.5vw, 36px);
+  line-height: 1.12;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+dialog.fmpu .fmpu__accent {
+  color: var(--fmpu-green);
+}
+
+/* Paragraph */
+dialog.fmpu .fmpu__text {
+  font-size: clamp(13px, 2.3vw, 19px);
+  line-height: 1.4;
+  max-width: 20em;
+  margin: 0 0 clamp(6px, 1.3vw, 14px);
+  overflow-wrap: break-word;
+}
+
+/* Button */
+dialog.fmpu .fmpu__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 2.2vw, 22px);
+  max-width: 100%;
+  min-width: 0;
+  padding: clamp(5px, .9vw, 8px) clamp(6px, 1vw, 9px) clamp(5px, .9vw, 8px) clamp(14px, 2.6vw, 24px);
+  background: var(--fmpu-navy);
+  color: var(--fmpu-on-dark);
+  border: 0;
+  border-radius: 999px;
+  font-size: clamp(12px, 2.1vw, 17px);
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 14px 26px -14px var(--fmpu-shadow);
+  transition: transform .3s var(--fmpu-ease), box-shadow .3s var(--fmpu-ease);
+}
+
+dialog.fmpu .fmpu__btn:hover {
+  background: var(--fmpu-navy);
+  color: var(--fmpu-on-dark);
+}
+
+dialog.fmpu .fmpu__btn:focus-visible {
+  outline: 2px solid var(--fmpu-green);
+  outline-offset: 3px;
+}
+
+dialog.fmpu .fmpu__btn-label {
+  min-width: 0;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+dialog.fmpu .fmpu__btn-arrow {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: clamp(28px, 5vw, 42px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--fmpu-lime);
+  color: var(--fmpu-navy);
+  transition: transform .3s var(--fmpu-ease);
+}
+
+dialog.fmpu .fmpu__btn-arrow svg {
+  width: 50%;
+  height: 50%;
+  display: block;
+}
+
+@media (hover: hover) {
+  dialog.fmpu .fmpu__btn:hover {
+    transform: translateY(-2px);
+  }
+
+  dialog.fmpu .fmpu__btn:hover .fmpu__btn-arrow {
+    transform: translateX(3px);
+  }
+}
+
+/* Close button */
+dialog.fmpu .fmpu-close {
+  position: absolute;
+  z-index: 2;
+  top: clamp(-18px, -2.3vw, -12px);
+  right: clamp(-14px, -1.6vw, -8px);
+  display: grid;
+  place-items: center;
+  width: clamp(34px, 5.6vw, 50px);
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid var(--fmpu-card-line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--fmpu-navy);
+  cursor: pointer;
+  box-shadow: 0 12px 22px -10px var(--fmpu-shadow);
+  transition: transform .3s var(--fmpu-ease), background-color .3s ease, color .3s ease;
+}
+
+dialog.fmpu .fmpu-close__icon {
+  display: grid;
+  place-items: center;
+  width: 46%;
+  aspect-ratio: 1;
+}
+
+dialog.fmpu .fmpu-close__icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+dialog.fmpu .fmpu-close:focus-visible {
+  outline: 2px solid var(--fmpu-green);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  dialog.fmpu .fmpu-close:hover {
+    background: var(--fmpu-navy);
+    color: var(--fmpu-on-dark);
+    transform: rotate(90deg);
+  }
+}
+
+/* PHONES (< 600px) */
+@media (max-width: 599px) {
+  dialog.fmpu {
+    width: min(92vw, 420px);
+    max-height: 92vh;
+    padding: 22px 14px 14px;
+  }
+
+  dialog.fmpu .fmpu-card {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    overflow: visible;
+  }
+
+  dialog.fmpu .fmpu-media__img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 34vh;
+    border-radius: var(--fmpu-r) var(--fmpu-r) 50% 50% / var(--fmpu-r) var(--fmpu-r) 18px 18px;
+    border-right: 0;
+    border-bottom: clamp(3px, .8vw, 5px) solid var(--fmpu-green);
+  }
+
+  dialog.fmpu .fmpu-body {
+    align-items: center;
+    text-align: center;
+    padding: 18px 18px 20px;
+    gap: 8px;
+  }
+
+  dialog.fmpu .fmpu-badge {
+    width: 52px;
+  }
+
+  dialog.fmpu .fmpu__title {
+    font-size: clamp(22px, 6.4vw, 28px);
+  }
+
+  dialog.fmpu .fmpu__text {
+    font-size: 15px;
+    max-width: none;
+  }
+
+  dialog.fmpu .fmpu__btn {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 7px 8px 7px 20px;
+  }
+
+  dialog.fmpu .fmpu-close {
+    top: -12px;
+    right: -4px;
+    width: 38px;
+  }
+}
+
+/* PHONES <= 359px */
+@media (max-width: 359px) {
+  dialog.fmpu .fmpu__title {
+    font-size: 21px;
+  }
+
+  dialog.fmpu .fmpu__text {
+    font-size: 14px;
+  }
+
+  dialog.fmpu .fmpu__btn {
+    font-size: 14px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  dialog.fmpu[open] {
+    animation: none;
+  }
+
+  dialog.fmpu[open]::backdrop {
+    animation: none;
+  }
+
+  dialog.fmpu,
+  dialog.fmpu *,
+  dialog.fmpu *::before,
+  dialog.fmpu *::after {
+    transition: none !important;
+    transform: none !important;
+  }
+}
